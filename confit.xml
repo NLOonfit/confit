@@ -1,0 +1,618 @@
+<config>
+    <profile>vkCity</profile>
+    <socialNetwork>vkontakte</socialNetwork>
+    <clientLogUrl>#</clientLogUrl>
+    <production>true</production>
+    <locale>ru</locale>
+    <logstash active="true" host="log.tortugasocial.com" port="5143" />
+    <social>
+        <application name="city">
+            <url>http://vk.com/app2255775</url>
+            <appId>2255775</appId>
+            <testMode>0</testMode>
+            <!-- <inviteGold>10</inviteGold> -->
+        </application>
+        <application name="island">
+            <url>http://vk.com/app2976126</url>
+            <appId>2976126</appId>
+            <testMode>0</testMode>
+        </application>
+    </social>
+    <collectStats>true</collectStats>
+    <bigBrother url="http://api.big-brother.tortugasocial.com/api" project="avataria-vk" active="true" />
+    <statsActive>true</statsActive>
+    <socialAuth url="https://auth.tortugasocial.com/" ttl="110" social="vkontakte" project="avataria-vk" active="true" />
+    <applicationId>avataria-vk</applicationId>
+    <serverconfig protocol="binary" />
+    <hardVirality>false</hardVirality>
+    <locationRestrictions>
+        <!-- <item id="canyon" on="true" allowedIds="" layer2Active="true"/> -->
+        <!--  school = yandexSchool, schoolAvataria = casual school. See more ids in WorkScenarioTypes.as  -->
+        <item id="school" on="false" allowedIds="" />
+        <item id="schoolAvataria" on="false" allowedIds="" />
+    </locationRestrictions>
+    <metrics>
+        <payment type="yandexMetrika" counterId="31369583" />
+        <clothesShop type="yandexMetrika" counterId="31408358" />
+    </metrics>
+    <startUpDialog>
+        <welcome popup="false" button="false" version="18" />
+        <sharedObjectAward popup="true" />
+    </startUpDialog>
+    <globalNews active="true" />
+    <clan>
+        <logoUrl>http://cdn-sp.tortugasocial.com/avataria-ru/promo/clan/logo/{$id}.png</logoUrl>
+    </clan>
+    <contentConfigs>
+        <contentConfig cdn="default">
+            <contentUrl>https://cdn-sp.tortugasocial.com/avataria-ru/</contentUrl>
+            <contentMirrorUrl>https://tortugacdn-a.akamaihd.net/avataria-ru/</contentMirrorUrl>
+            <furnitureUrl>https://cdn-sp.tortugasocial.com/avataria-ru/swf/furniture/</furnitureUrl>
+            <furnitureMirrorUrl>https://tortugacdn-a.akamaihd.net/avataria-ru/swf/furniture/</furnitureMirrorUrl>
+        </contentConfig>
+    </contentConfigs>
+    <supportUrl>https://tortuga.zendesk.com/hc/ru/categories/360001246992-%D0%90%D0%B2%D0%B0%D1%82%D0%B0%D1%80%D0%B8%D1%8F</supportUrl>
+    <communityUrl>https://vk.com/avataryaclub</communityUrl>
+    <island show="true" exchange="true" />
+    <rating on="true" allowedIds="246030,1897004,3794109" />
+    <offersAllowed>false</offersAllowed>
+    <activityRating on="true" />
+    <allowedIds>94273176,246030,125602397,3794109,1897004</allowedIds>
+    <preloaderThemes>
+        <theme id="pillows" url="http://cdn-sp.tortugasocial.com/avataria-ru/swf/preloader/PillowFightComix_ru.swf" />
+        <theme id="romance" url="http://cdn-sp.tortugasocial.com/avataria-ru/swf/preloader/RomanceComix_ru.swf" />
+        <theme id="dresses" url="http://cdn-sp.tortugasocial.com/avataria-ru/swf/preloader/GirlsDressesComix_ru.swf" />
+    </preloaderThemes>
+    <preloaderConfig>
+        <params url="http://cdn-sp.tortugasocial.com/avataria-ru/swf/preloader/ZeoPreloader.swf" bgColor="0x091014" textColor="0x07b99d" />
+        <textHints locale="ru">
+            <hint>З̴̘̳͊́а̴̝͙̓͠г̸̢̬͇̻͙̒͂̀͝р̷̻̹̭̥͋у̵͖̃з̷͔͍̭̆̒̌̌к̴͔̅а̷̧̠̼͙̠͋̌ ̵̠̱̇̔̍и̶̛͚̖̥͜г̸̡̣͓̹̬̅р̶̢͓̑̒̓̈́ы̴̎̅̊͜ ̴͚̾́о̸͔̼̱̅̑̓͘б̷̧̩͙̓͜ͅр̴̭̈́̓е̶̥̙͓̾͊̈́͠ч̶͚̔́̂е̴̧͙̖͕͐̃н̴̢͉̠͕͕̆̇̐̓͝а̶̻̕ ̵̢̡̻̊н̸͍̫̣̅͌͜а̸̡̘͂ ̷̺͎̈̆͒̋͘п̸̪͎̥̓̊͐̂̏р̴̺̣̋̓͒̚о̷̢̤̻̤̳̓̎в̵̡̫̮͔̚а̸̝̍̿л̵̺̫͍̂̄</hint>
+            <hint>Н̵̦͇̘̯̻̯͖̘̈͂͆̃̔̄̍̌̔̔́͘̚͜͜͜͝е̶̛̜̼͈̞͎̦͇͙͙̄̀̂̅̓̏͂̆̄̔͋́̒̉̚͠ ̸̟̤̯̳͖̬̝̞̓͊͛̎͜͝п̶̘̺̺̐̉͒́̆̓̐̉̊͂̈́̏͘̕͝ы̷̧̨̬̫̪̥̟̫̫̮̣̦̀̓͛̕т̵̨̞̗̪͎̖̟̣̏а̷̧͖̠̱͚̹̭̥͓̖̝͇̳̓̌̐̀̈́̐̒̎̄̉̌͒̿͝͝͠ͅй̸̡̢̢̼̯̦̯͈̘̒̋̂͆̿̊͑͛͐͘͝ͅс̵̞̲̣̹̞̟͔̠̪͆̿̓̎̆̈͝ͅя̴̪̯̫̗͉̑ ̵̧̧̰̻̗̞̙̪̣̼̗̪͈̞̄̑̊̒͛͋̇͋̔̌̑̄̐͒͝п̸̨̛̱̟̬̦͉̜͚̙̯̹̱̮̮͊͋̄͊̍͘͠р̴̛̱̦̅́о̶͓̭̠̯͕͕̾̈̅̔т̴̟̦̥̻͕̽̓̍̋͗̈́ѝ̷͈͈͇͚̯̣̗̗̻͍̳̂͂̈̂͊̌͐͆̈́͑̕͠ͅв̶̼̳̘̥̘͙͍̜͈̖͇͙͖̦̾̅̚͘͜͠ͅо̴̧̡͎̲̬̮̣͑̎͑͝ͅс̶̻̼̺͎̥̀́̄͌т̵̧̳̺̖̰̬̯̩̊̾͜о̶͔̘̣̲̊̎͜͜ͅя̷̨̛͍̙̻͈̪̹͍͙̣̗̳͎̤̮̲̂̽̃̈́̍̌̾̆͒͘͠т̵̯͔̲͆́̋̌͊͆͛͛̋̍́̚͝ь̴̺̼̂̓͑
+                ̴̢̨̪͆͂̍͌̿͒͒͑̏͝м̵̡͙͎̜̗͎̫͔̗̖͛̆̊̒о̵̟̖͓̪̓͐̌͋̂̉̆̉̆е̵̭̳͓̞̜̳͍͉̻̜́м̸̛̫͚̎̈̌͂̇̚у̸̤͔̮̳͆̉̿̓̈́̚͠͝͠͠ ̸̡̢̢̛̦̞͚̜̗̪̞̭̦̘̬̯̖̥̉̀́̽͒͊̏͌̈́м̵͔̀͂̌̿͌̒̓̚̚͝͠о̸̢͓͔͓̐͆͑̆̓̇͋́̉г̶̢̙̥͚̘̐у̶̜̥̤̲̖̉͗ͅщ̷̡̬̥͉̾̽̀̂͗̔͒̈̾̽̂͗͘͝͝е̶͍̥̐̆͐̐ͅс̵̩͌͂͑̂̀͝т̵̛͍͉̣̠̗̟͙̮͕̍̏̽͛̈́̕͝͠͠в̴̠̜̈́̔ӱ̸̠́̐͌̅̿̌̂͐̆̌̾,̵̦̥̜́́͒̑͊̕͝</hint>
+            <hint>Т̵̢̢̺̙͎̼̝̫̌͋̊͑͋̀̈́͊́̈̔̓̅̚ы̵̡̧̺̠̼̰̙̥̗͎̣̦̞̪̙̋͜ͅ ̶̡̡͓͖̓м̶̨̡͖̱̹̑̄͂̌̋̽͂͐́̕о̵̰̫̫̺͓̗͌͗̈́͛̋̄̾̍͐̌̈͂̋͑͠ж̵̡̻͙̭͓̤̗́̇̄̈̀͌́͋͒̿̕̚͠͠ѐ̶͖̻̱̫͙̗͓̗̞̜̰̰̟̦̤̀̈́͋͋̓͜ш̸̯̪͈̮̤͕͇̤̭̀́̍̆̓͑̆͗ь̸̼̜̯͉̬̤͕͈̪̯̏̉̄́̉̔̃̾̆̈͘ ̴͙̣̳̠̣͎̩̦̣̤̖̹̬̈̏̒̌̔̋͌́̚̚̕̚б̶͙͙̩̓̃͊́͒̈̕е̷̢͔͙͈͔̻͔̗͙̂̓͆̈͗̓̇̃̄́͗̎̋̿̈̂͜͝ж̵̧̡̦̞͔̗̺̘̬̞̰̺͋̅̌а̵̡͈̖̪̙͕̀͒͌̋̇̇͘т̷̡̛͈͇͉̻̭̩̙̫̙̥̇̄̀̎̈́̎̈́̎̎̍ь̴͕̜̲̙͈̅̅̽͘,̶̡͚͉̱̰̯̯͐̋́͊̍̓̄̓͂̑̕͜͝
+                ̷̹̝̥̪̫̍н̷̨̭͚̘͙̠̜̯̹̬̺͙̊̍̀̈́ͅо̵̠͈̝̜͔͍̻̥̗̙̤̙͖̰̀̈̅̇̈́̕͠ ̶͎̪͔́̎̓̿̓̅̌͘т̶̢̧̛̖̗̙̪͙̫̙͓͇͇̣̇̑̈́̿͑̈́͌͠е̸̢̮̮̲̭͍̜̱͙̜̟̻̐̈́̔̈́̇̿̽̐͛̇̍̕б̵̝̣̲͕̱͇͍̗̼̌̽̒̇̑͐̈́̈̉̿̂̆̚͜͜ѐ̴̮̜̦̲̘̪̯͉̳̭̪̠̝̲̋ ̵̡̢̻͉͍̝̠̱̲́̆̓̈́͑̍͜н̴̡̢̱̱͓̭̮͔̦͔̜̼̭͍̞͇͒̏̂̋͘͜е̶̢̨͈̗̜̞̤̗̍̓͒̾̎̂̄̒̚ ̶͖̰̼̼̾̾͌̊͗̊̀͘̚̚͝с̶̢̧̨̧̻̩̪̰͔̫̇̓̈̌́͂̈́ͅп̵̫͉̾͗р̶̨͇̰̲̭̹̆͒̓̔̔̀͊̒̔̉я̸̨̨̡̡͈͈̖͕̜͚̘̜̯̠̠̰̌̂̉͗ͅт̸̞̙̋̐̏̉͆̑̑̋̾̾͐̒͛̕а̵̛̛̳̣̜̓̈̾̉̄̔̉̍̒̀̈́̀̋͑̾т̸͔̲̺̥̣̟̪̽̋̾̇̓͌͗́̋̾̔̓̚ь̵̛̻͓͖͙͙̆͂̂͋̍̔̚с̶͈͔̫̙̠̜͔̖̝̈́̇̓̆͝я̸̡͙̫̹͕͚̦͎̟̖̮̈̈́̇̍͌͘</hint>
+            <hint>Н̸̡̡̢̛̖̪̝͖̬̰̰͚͙̪̮̭͑̓̽̓̒̑̈́̀̌́̅̇̔͘а̴̢̛͉̼̘̥̠͌̎͛̊̈́̕х̷̢̬̻̞̖̾̿͛͋̃̊̿̈о̵̗̥͉̲̞͎̺͚̌̏͗̓̉̽̈́̍̌̊̕д̵̭͎̈́́̽͊͠я̵̯̳̈́̔̃̾̀͋̋͒̀̅͒͂͝͝͠ͅс̷̧̞̩̖̂͂̔͌̀̂̾̄̈́͌̉́͐̚͠ь̶͎̠̰̲̗͓̮͚̰̃͑̉͂͝͠ ̵̢̺̹̻͎̤́̈́̿н̶̜̝̳̟͕̯̼͆̊̇͌͑͊̈́͗͑̋̿͘͝͠а̴̧̨̛̛̝̣̺̯̬͕̣̫̟̔̉̂̒̓̄̾̂̋͆ͅ ̵̦̱͓̬̻͔̘̺͓͗̉̆̌͊͝ͅл̸̩̫̬͍͊̆̈́о̴͙̟̼̯̝͖̣̭̭̭̝͉̑́͒͋̂̾̎̀̀͘͠ͅк̶̧̱̰̘͔̺͕̞̮̭͇̟̙͉̭̩̌а̷͙̗͍͍͙̺͗̽ͅц̷̢̙̝͈̺͔̬͇̮̼̤̉͘и̶̡̧͉̣̩͎̖̫̫̲̫̱̫͒̏̑̕͜я̶̝͉̜͇͙̱̺̬͍̿̃͘͠х̸̢̳͛̏̊
+                ̷̧̳̣͍͎͇̼̂б̸͓͌у̷̢͔̞̿̑̉̿̊̾̌̑͛̀̋ͅд̴̛̥͍̅͗̌̃̈́̔̆̂́̅ь̸̘͔̣̼̜̻̹̻̳̤̤̫̭̓̌̈́̏̈͂͒̌͑͊͜͜͜͠ ̸̢̧̡̭̖̱̣͓̘̟̠̻͓͖́̇́̀̃̔̄̀ͅо̷͋̊̾̂̓ͅс̵̗͙̟͓͔̙̼͒͂́̔̌͑͑̒͌̑̾̚͝͝т̵̡̜̭̙͔̜̥͂͐̊̆͂̋̓͘о̴̨̢̰͈͚̭̙̗̪͍͔̗͓̠̯̇̍͒̂̋̋́̏̃̚̚̚̕ͅр̴̡̛̱͇̪̝̦̺̋̍̌̾̏̋͛̄̈̃̈́͘͘ͅӧ̸̨̧̻̱̳͚͋̓̇́̉͌̈́̆͑̀́͂͑ж̶̨̛̼̯̮̜͖͐̇͗̆͛͑̊͌̾͝е̷̛̳̥̼͈̔̉͑̈́̓͌́̑̐̇̈̍͆͝ͅн̸̛̪̈́̂́̈́̔̋̇̀͠
+                ̸̡̡͍̱̩̞̜̟̽̀͑͒̈̅͆͋͛́̒́—̷̧̧̨̲̳͚̰͖͉̬̯̄̀̄͒̎́̆̍̎̀̍͊̚̕͠͝͝ͅ</hint>
+            <hint>Я̸̢̥̬͇̬̣̼̻̗̪̞͉̭̅̎́̾̿̌́͑̋͜͠͝ ̸̢̧̢̡̯̦͔̠̣̙̹̯̙̫̄̂͂̈́̀͐̀̓̇͠ж̸̡̛̛̣͇̻̗̤͚͉̻̟͓͖̉͋̍͊̓̀̇̽̚͝͝ͅд̸̨̧̞̼̻̮̱̣̥͇̓̇͒ͅу̷̢̙̱̠̠̼̳̟͕͖̲̭̣͛̌͌̌ͅ ̴̨̛͖͉́̽̄т̸̨̫̜̮̬͖̻̺͈͖̥̗̯̄̅̊͋̈́̏е̸̜̼̪̝̞͈͕̪͛̄̕͜б̶̢̦͖͓̜͎̮͆͒̓̓̃̀̉́̚я̶̢̨̨̼̲̣͍̰̘̜͕̭̬̮̪͇̔̍͗͑̈́̇̍̑̏̎̊̄͒͘͝ ̴̦̥͈͖͈̺̗̮̙̝̙̼̗̋в̵̧̟̘͉̹̹̝̍͒͆̀̽͛̀̕͘̚
+                ̴̲̝̬̩̰̙͕̤̪̖̩̻̗͎̲̟̥̀͌̓͑̐̂̀̔̄͌̔̊͆̉͝к̵̖̩̟̱̯̣̭̏̈́͑в̶̼̺̮̘̘̠̐̀̄͑͗̾̔̄̉̀̀͑̕̚͘а̸̨̗̬͕͎̤͎̃̇р̷̢͉̭̼̩͓̪̭̝̘͖͓͓͚̇̓̎̈́̆̓̓̀̓̆̂̚т̸̡̛͚͈̤͔̟͖̗̍̋̈́͂̀̀͊͊̈́͋̿̒͐̚̕͝и̸̣͖̩̜͕͛͋̆̏р̵̡̺͕̺̩͇͚̫̺͎̭̩́̌̑̏̃̇̀̀̓̉̑͂͑̐͝е̷̧̢̛̱̤͈͚̺͎̻͚̪͓͙̞̍̔̅͑̏̈́̑͌͊͒̇̃̐̍͠,̶͔͋̽͊̋̈́̐́͘ ̷̛̰̺̯̙̜͍͙͗̿͂͘͜͝х̴̢̢̛̘̥͙͎̣͉̯̗̠̺̳͉̺̑̌̋͐͜а̵̢̱͈͎͓̯̤̜̠̼͇̥̑ͅͅ-̴̡̢̨͇̜̱̬͉͇̪̠̑̔̉̂̎͊̍̅̍̒̏̅̀̂̚͠ͅх̴̡̹̖͔̥̖͍̖̣̾́̄̈́̋̓̎̇̑͐͊͆͋͘͝а̵̢̛̟̬̘͇͓̹̳̗͑͗̿̈́̎̎̇̋̔̀̂̏͌͋-̷̨̛̮̮͔̯̲͔̟͙̝̗̎͆̈̓̈́̇͒̂̒̚̚͘х̶̣̺͉̱͗̓а̴͚̞́̓́̆́͝</hint>
+            <hint>Н̶̙̻̹̼̝͉̝̉̂͊̉̒͋͂̒̏̃̈́̇̈̊͊̑͘е̶͚͖̦͍̪̣͇͑̀̈́͊́͗͐̇͗̒͂̈́͘͘ ̸̡̜̪̦̯̫̩͊̈́͊̾̆̏̾͒̌̉̿̿̚͘͝п̶̣͚͈͚̩͖̙͊̈́̂̉̋̾̋͊͆̀̕͜ͅӹ̸̣͇̲̣͈́̆̓̀̎̋̒̿́̅͛̒͘т̷̪̭̺̳̝̮̰͇̪̣͉̦̋́̊̓͆̊̋̓̓̌͆̉̚ͅа̷̫̻̫̠̞̰͉̤̟̰͙̜͒̿͛͒͆̑͝͝͠й̸̛͙̖͇̥̭̹͇͖̜̬͈̠̼̫̗͆͛̓̈́̓̽͌͐͗͐̆̓̚̚̕͠с̶͈̜͓̝̣̬́̀͊̋̄̑̍̈́̿͋̑͋̕͠я̷̡̭͙̝̻͉̦̝̙͓̿͊̒̃̆̀͑͝
+                ̷̝̣̼̭̋͗͐̐̑͌̄̂̽̋̒͆̍͜р̴̤̤͊̃͆̽̑̂͌̓̒̉̚͝а̴̯̄̽͆͂̔̕͠з̷̡̜͇̱̰̞͍͕̺̲̜͎̪̮̃̄̅̐͌̾̽̊̀͋̃͒͒̃͂͘г̷̖͇͔͎͚͕̤̗͌͜ͅа̷͔̿̃д̵̧̯̳̀̈͂̓͗̈̿̎̋̊͆͠ӑ̶͚̪̻͖̈́͑͛̎̔́͛͆͘̕͝т̷̬̪̜̦̙͚̥̣̰̻̞͇̺̮̞̹͒ь̴̢̡̡̛͙͖̗̰̤͔̲͙̭͗́́̀̅̀̀̔̆̉̀͝ ̸̭̬̮̫̙̦̖͙̥͑̋͛̑̅͊̄͋̒͐̕͠в̸̞͖̺̲̗͑̊͛с̶̳̞̥̻̠̬̗͔̾̂̀͂̍̑е̶̧͎͙̤̍͊̾̎͆͋͊̔̆͗́
+                ̷̟̼͙͇͎̙͂͐͋̚ͅз̷̨̧͖͓̯̝̠̫͙̪͍̟͐̒̐͑̌͛͋̌̿͐̎͂̂̀̚а̶̯͛͊̀̋̊̀̔̈́͘͠г̴̘̪̠̙̲̰͔̬̤̏̐̇̈̓͐̔͂̾̉̂̎̉́͘͝ͅа̶̧̨̳̦͔̘͈̩͙͈̜̩̺̥̥̂̀̃̔̒͒̃̽͗̍̾͗̇̇͜͝д̷̛̝̼̖̒̈́̓̅̇̇͊̍͒͝к̵̧͕̰͔̝͇͓͕̮̺͉̱̒͒͗̈́̄͊͒̐̌̄̃̈́̕͝ͅи̵̡͚̰̭̞͕̩͔̘̦̝̳͕͐͗̄̈̈́͆̍́̂̿̊̋͠.̴̨͖̒̈́͗͌̒̈́̏͌͌̕ ̸̰͚̞̠̘̦̖̤͓̹̗̜̭̥͎̹̋̊̀͌͆͜Т̸̩̂̐̅̈́́̓̐̎͂е̸̡̰̳̜̱̹̩̼͖̲͉̤͌̽͗б̵̡̡̠̜̥̤͈̱̭͔̗̻̱̣̄̽̓͑̀̽̽̄́̑̊͠͝͠е̶͙̮̰̱͑
+                ̵̖̰͚̬̳̯͆̂͋͂н̷̻̤̟͙̱͒̈́̽̈́̽͘͜е̵͍̦̅̓̽̀̍</hint>
+            <hint>В̸̘̦̟̠̮͖͓̐̒̓̽̉̆̿̚͘͝͠͝͝͝͝ ̴̮̭͇̰̺̠̑͊͛̅̈́͛̇̃̃͂͛̂͗̓̄̐͝ͅп̸͉̥͂͌̅͋̾͛̈а̸̧̯̳͇́̓̓̐̈̏̑̒̌̉̽͠͝р̴̡͎̜̰̬̱̠͓̞̂̈́́̐̍̽͑к̷̡̧͙̺̼̜̞͓͈̼̦̳̟̗͖̲͝ͅе̷̛̩̣̼͖̬͐̄̌͆̇̐̑͝ ̷̛̼͕̃̀͆͒̂̉̏̉̅̋͐͌̈́ͅт̶̹̉̓̈́̍́̔͒͊̊͛̅̂̌̅͝е̸̡̛͕̞̪̟͚̳̝̙͖̾̈̎̎̊́б̸̺͎̞͙̮̥̺̺̲̥̙̒͂̾͛̊̒͛̈́̔̾̈́̐̐͘̕͝͝я̶̡̧̡͕̬̺̖͉̭̩̍̈́̎͝ ̴̫̮̖̓̈͂̍̏͂̓͊̉̆͆̇̕͝ж̷̗͆̀̀̓̐́̆д̷̥̲̯̹͓͕̩̻̮́̿͒̿͝͝е̷̜̣͉͍̼̗̘͍͓̰̫́̈́̄͋̈́̏т̸̹͛̈́̈́̋͆
+                ̶̟͈͎͍̼̬̼͓̲̆̀́̽̿̑̒͑͛́̏̓̿̍̄͛̕п̵̨̡͍̖͚̝̪̲͇̭̋̓̒р̶̡̨͖̠̰̱̟̦̪͊̎̅̋̽̽̔͗̐̑͆̑ӥ̷̮̑̋͐̔̀̊͒͊͊͊͊̒́̊͠я̸̪͖̰̙̭͕͎͓͚͈͇̺͍̥̉̊͋͒̉̿͆̍͑͐͘̚͠͝ͅт̵̡̨̨͚͕̻̱̭͕̬̯̲̟͑͠н̷͙̲͖͙͓̟̖̀͌́͘ͅы̶̨̢̱̣͚̺̱͈͓͍̝͈̳͋̔́͛̅̉͆͜͝͝й̵͖͖̳͔̫̣̩̞̝̹̾͌̒̾̆͝ ̸̲̠̩̹͒̈́̂̍͂͒͒̈́̋̍̔̈́́̌̇͘͝ͅс̶̨̬͕̙̺̺͍͕̯͙͖̩͚̱̳̼́̂̒͊̊̑̒ю̶̺͒͋̓̑̾͒̐́̀̕р̶̝̤̱̩̪̟̘̯͐̓̓͗̏̆̋̀͌̍͘͝ͅп̸̝̺̤̬̦͈̞̤̺̳̞͐̍̈͗̀͊̽͗̂͊́̽͘͜͝р̴̦͚͚͎͎̺̲̭͉̱͉͕͑̀͋͛̾͘ӥ̷̧̢̲̭̻̯̝̖̤͚̗̝͓͓̳́̈́͌̀́̀̉̿̂͒̔͛͒͛̆з̶̢̞̺̪͖͛</hint>
+            <hint>Н̸̤̮̫̬͍̼̖̉͜ͅе̷̢͓̘͎̤͕̲̱̫̫͍͋̈̎̈́̈̃̾͘͝ ̴̡̼̜̩̳͕̲͇̼̤̦̫̩͆̅͆̄͜͠п̴̩̜͖̻̯̝̤̘̠̌͝ы̵̨̨̢͔̪̠̪̖͕̳̲̮̟̱̘̣͍̃̀͐̃̓̈́̚͝т̸̧̨̡̳̓̎́͊̋ӓ̸̨̧̨̡̤͖̩͙͈͔͈͈̤̞́̈́́͆̏̋̑̂͆̐͒̎͑̕͝͝ͅй̵̮̳͎̭̲̤͎̣̪̳̝̱̮̊̈́͋̏̇̎̓̈͆͗͆̒͂͘͝с̴̜͎̟͖̘̲̳̺͎̤̉я̴̨͖̦̞̤̪̼̜̦̦͝ ̷͓̯͍̟͍̞̜͚̩̞̯͙̲̬̈́̓́͐́́̏͌̐͘ͅп̴̦͉̺̺͉͔̟̞͇̟̳̻͚͒͂͌̎̔̃̎͊ͅо̸̻͓̙̙̭͇̿̈́͆͛̒̑̉̈́̓͌̆̎̀̓̚͝͝п̷̧̡̤͖̣͎͇̙̝̽͂̈́̐̄̎̕а̶̟͓̝̰͙̦̩̗̏͆̈́̈̓͋̒͑̆̀͋̓̂̌͠͠с̸̧̨̢̡̭̳͕͖͙̯̮͚͇͐͒̐̆̃͗̄͊͊́̚т̵̘̣̳̋̌̈́͐̎̍̇ь̶̡̡̢͔̘̣͉͔͎͔͛̂͊̓̉͌̓̐̔̃͝
+                ̵̡̪̟͓͇̭̖͕̺̈́̔̔̋̽͂̈́̋в̵̥͇̭̳̬̹̜̺̹͇̤̘͉̘̲̏̒͆̔̄͗̋̎̎̎̀̍͑ ̸̨̝̈̈́̃̏̀̽̆̎̇̉̾̇̀͑к̵̨̡̨̛̮̮̦̫̳̝̠͚̐̀̊̽͊̿͒̽͐̄̐͛̎̂̏̿ͅͅӓ̷̧̢̣̭̝̣̥̖н̸̧̳̞̥̯̬̤̤͍̠̐̚ь̶̻͎͓̮̋о̸̗̦͔͍͚͇̥̺͂̍͗͝н̵͉̥̂̄͗͋̀̀̓̅́̃̉̌͆̀͘͝,̴̧̞̘̗̻̳̹͉̳̓̐̇̐̑̈͌͐̂̇̔̈͘̚ ̷͖̈́̊̓͠т̸̨̘͓͙͚̭̹͔̣͍̝͎̣̺̻̱͕̇́͆̒̈̾͆́̎̓͝а̸̨̺͎̠̣̻̱͎̹̲͔̠̽́̿̿̔̒̕͜͝м̵̬̯̩̯̎̂̓͗̈̈́̏̽̈́̎̂
+                ̵̢̢̱̺̫͚̬̲̹͇͔͎̣͖̜̣̈̾̓́̑̕͝т̷͖̼̯̜͕̜͓̹́͒͑̃͊̀̉̑̆͑̀̄͌̐̕͠͠ͅе̶̡̡͇̣͎̫̭̣̫̝͉͍̓͛̃̎б̶̧̣̜̰̥̜̖̯̙̫̞̝̭̳̑̈́̋̈́̌̏̕͘͠͠я̶̧̨̤̰̘̬̖͇͖͙̪̊̐͑̓̇̎͒̚ ̶̡̨̤͍̦̠̱̙̳̠̠̠͚̻̼͐̽͝ӝ̶̨̛̺͙̲̘̥̥́́̀̋́̒́͆͊͛̔̅̒̿͝д̸̛̭̟̽̀͛̉̓̂̄̀̉͊͌͝ё̴̡̥̩̜͓̪͎̉͝т̷̡̣͍̱͚̻͗̈́̒̾̃̓́̕͜͝ ̵̛̭̦͈̾̔̇̍͛̓͌̂п̷̨̯̦̘͎̟̻̝̣͕̪͑̉̽̀̃͘͜͝о̴̢̡̺̫̼͈̭̦̱̪͖͈̳̺̑̏́̍̎̃͘с̷̹͖͚̖̯̲̖̙͍̱̩̼̤̯̜̮̅͜͝л̵̢̖͉̪͍̪͒̓͂͌́е̶̡͎̗̤̖̹̙̂̉͌̈́͗̐͘д̶̠͇̣̤̫͙͙͖̖̟̈́̐̐͝н̴̨̯̯͓̫̱̮̻̒̒̏̇̒̾̑́̕ͅя̵̨̡̡͚̗̦̓͑͘я̵̨̨̤̟̗̖̦̦̞͓͚̜̟̖̰́̎͜͜
+                ̴͔̊̈͠͠г̷̧̧͎͖͙̟̟̝̠͖̹͇̦̰̒̔͗͒̂̒̀͐̽͂̔̔͑̚͝͝о̶̨̨̧͉̮̯̱̫͙̜̣͖̻̗̮͍̆н̸͓̽̈к̸̧̡̧̨̤͇̱̖͙͉͕̯͎̩̐͌͐̀͊̃̐́͘̚͘ͅа̸̡͔̼̻̺͙̙̟̯̞͕̲̻̱̎̐̓̌̈́̊̽͝ͅ</hint>
+            <hint>З̴͍̥͓̦̩͔̖̗͇͉̹̔̉̀͐̓̃̈̓̍̆а̸̧̫̟̜͕̲̦̳͖̝̰̘̼͓͙͗͒̈́̆̓г̸̡̡͉̲̲͕̼̯̲̖͈̆̀̂̎̔̀͊̈́̔̌͛ͅр̴̡̛̦̞̼̰̥̪͈̾͒͊̈̽̑͐̊̈́̆̋̔̕̕͠у̷̡̩͉̪͇̥̤̬̤͙͉͗ж̴̧̡̤̯̰̉́̊̂́̂̀̆̓̅̕͝ӓ̴͍͔̖̪̳̦̭́͑̈̂͛͝е̴͚̪̯͓͍͙͍͛͋̔̏̓̽̆́̈͌̕͘͠т̵̡̨̮̗͉͖͇͖͙̦͉̟͔̹͂͛̔̄̀͆̈́̐̀̕͘͝ͅс̵̛̦͎̘̻̗̰̝̱͕̟̗͗̒̎́͑͐я̷̨̨̮̺͇̥̫̝̊̐̐̌̿̄̋̆̚͝ ̵̟͙̲̱̙̟̲͊̑̽̍͂̓͂̊̇̀͆̀͊̂̅͑͝п̵̡̛̪̣͎̯̠̫̱͙̲̙̲̈́́̾̓̎̔̆̓̅̚о̶̧̨͙͚͓̬̩̲̺̲̥̙͍͉̾̀͂͋̉̓͂͑̋͗̆̿͋͜р̵̨̛̞͇͊̊̊͌̓͜͠а̵͍̥̭̃͒̆̃̓̀̑͗͘͝б̵̡̳͎̺͙̯̦͉̙̫̝͖̝͙̈́͐͋́̌́́̑ͅо̵̨̭͚͈̝̻̥͍̘̆̿͋̈̍̌͝щ̷̢̟̗̥͚̱̹͇̦̠̿̇͒̒͝е̵͖̞̟͉̖͌́̃̈́̾̒̈́̌͆̍̃͌̈́͆͐̕͝н̸̢̛̹̻̗̰͖͙̟̱̣̠͙̑́̆̈̀͊͌̃͊̌̔͋͂͜ͅи̷̛̗̺̞̔̽̎̋̀̈́́̃̍̇́́̋̑̕͠е̴̢̘̣͕͈͉̘̓̽̋̕̚̕͘͜͠ͅ
+                ̴̢̦̻͓̗̯̫̣͕̭͔̉̀̿͛̾̑͛̂̈̃͝ͅͅӒ̷̤̲̳̙̥́̈́͐̈͐̈́̀̀͋̐͗̑͘͝в̴̧̗̖̣͓̙͎͈͉̠͉͚̭̩̠͇͙̓͌͊͂͗̈́̓̑̒̉̀̀͐̕͝͝а̶̥̀̄̀̔́͊т̵̨̡̢̙̜͚͍̟̯͍̼̦͙͙͋̈́̏͐́̑̌̂̓̕͝͝͠а̷̬̦̖͗̎̓̽̌̍̑͗̑̕͘̕р̴͉̋̋̈́и̷̧̺͔̤̯̖̗̞̪̖̭̿ѝ̸̡̺̦̫̹͖̥͙͇͚̬͙̳͙̱̠͝,̴̨̛͇̼̬̫̫͌̒͋̍͂̐̀̎́͠ ̷̢̪̣͓̜̰͕̲̥͉͔͍̲̝̥̬̊̒̓̍̉̆̒̕͘͝ͅп̷̞̑̌о̶̯̬̠̯͇̩̼̝͂̆͛̀͂̀̈́͗̈̏̕͜ͅж̸͔̗̯̺̼͈̟͉̺́́̓а̶̤͎̯̳̹̗̟͗̀͊́͒̒́͊͘͠л̸̡̥̥̞̱͔͔̬̤͈͕͔̤͍̋̀̄͒̅ͅу̵̢̛̠̦̬̣͖̜̲̻̑̆̿͑̇̔͘͠й̵̬̏̅̀̎͊̽̾̓̋͐̔̀̚̕͠ͅс̸̙̜͈̭͐̉̋͝͝т̵̨̢̰͚̗͉̼̤̯͚̯̈͆͑͘ͅӓ̸̨͈̥͓́̂̓͛́̓,̴̧̧̫̭̻̝̗̹̘̗̺́̈́͊͌͊̿̈́̑̎̆͛͛͝
+                ̵̛̛͎̮̩͓͕̗̭̳̍̀́́͝ͅͅп̷̛̠̭͙̣͍̿̃͐̐̿͂͊̇̐̾͂́̕͝о̷̟͉̫̘̫͊̾̏̀̓̎̀̈́̚̚д̵̨̗̪̭̰̱͚̱̜̤̘̹̫̺͗͝ͅͅо̶̨̛͉̪̗̗͔̝͖͕̍͒̀̈͋͌͒ж̶͇͚̌̈́̍̀̒д̸̢̬̗̭̘̰͚̤͈̥̫̼̓́̅̀̈и̸̡̡̲̙̳̪̟͔̙̦͚̻͓̻̠͚̿́̿͂̈́̊̈́̊̌̃̓̈́͛̒̈́̏т̷̡̛̦͎̞̒́̑̎͗̅̽̆͠е̸̤̲̺͙͖͓͈́̋̐̋̋͆͋̆͒̄.̸̨̺̟͎̯͙͇̳̞͇͙̘͒̽̑̓̓̐̇͜͝͝͝ͅ.̵̪̺̗̾̑.̵̢̧̢̼̹̳̤͔̥̬̻͚̗͚̺͖̳̄</hint>
+            <hint>П̴̛͕̭͗̔̈́̌͊͠о̷̨̡̜͈̟͚̦̥̯̝̫͉͌͛̕ж̶̯͎̗͎͈̝̦͗ӓ̵̘͔̘̼̻͈̞͇͇̪̻̭̦́͊͊̽̅̓͒̆͛́̒͒̿͗͝л̷̡̙̞͔͓͖͈̯͎̻̋̽̍̅̑̊͌̉́͠у̶̯̫̝̞̞̘̞̪̝̑̏̒̈́̒̉̇͌͑̏̂̔̕͠͝й̴̫͍̝̼̺̠̘͉̟̞̦̣̈́̉̾͐̔͑̾̆͌͜с̴̧͉͎̗̱̲͎̤̤̺̜͎͇͈̊̽̇̂̃̒͗͒͒̕т̴̙̬̦̞͉̬̪̮̲̺̙̣͈͔̪̊́̍̑̅а̶̨̢̺̤̻̮̬̳͖͚̣̩̅̽̊̓͌̓̔̆͋́̎̈́̑͘̕͜͠ ̸̡̲̻̱̤̼̭̝̊̽̒̈́͂̀п̶̥͓̰̹̼͓̔̒͆̓͆͋̔̈́́̎̈́̕͝͠ӧ̴͈̠̬̳̙̼̩̻̗͖͕̘̥́̒̽̑͒̅̇̿͗м̷͖̰̭̭̩͛͒о̷̡̤̣̞͉̪̳͖͔̊̃̆̏̌͌̄͑͜͜г̴̹̤͇͔̗̈́̇̊̄̃̀̂̚и̵̢̛̥̥̠͌̈́̈́́͠т̵͕̰̗̜̺̫͙̟͕̤̪͗̄̀͊̍̊͘͘͝е̴̢̡͖̬̤̮̣̪͓̭̓͋̚͜ͅ
+                ̵̨̛͖̤̱̥̫́̇̆̈́̐̃̍̾̔̋̓̚͝ͅн̵̢̞̖̼̼̻̙̉͂̒̅̀̆̂̆̕а̶̨̲̫̪̳͙͎̞̞̭̰̜̟̖̬͓̌̇͑̐̋́̊̓͌̈́̋̕̚͝м̷̦̜͉̥͙̒̑̄͑͊̒́̈̏͌͘͠͝ ̵̨̡͕̠̣̳̖̬̼̪̪̠͈̯͈͚̥̊̈̃͗̎̉̑̐̿͋͌̌̂͌͝в̴̨̧̢̛͚͚͍̞̤̳̙̖̘̃̂͒̆͗̓̔͘ͅͅ ̴̧̪̖̻͕͈͚̬͈͚̜̥͖̩̣̝̿̊̅͂͛͆̆͆̅̽͑̚ͅ.̸͓͎̬͍̘̙͌̃̍.̸̡̡̨͚̤̠̤̝̭̫͙̺̝̠̝͛̇̌͆̇̚ͅ.̷̡̖̠͐̃̎̊̑͆ ̷̢͓͚̹̞̝̬̩̲̮͖̥͉̍̉͗̈́!̸̢̡̢̛̱͉̰̜̳̝̂̿̐̆̑̂̆̎̀͝
+                ̴͎̬̤͇̞͇̼̗͔̠͚̓͋͌̀͑М̴̡̻͓̖͇͕͖̜͍̥̻̻͕̭̰́͑̋͂̏̆̀͋͌͋͋́͆̑͝͠͝ͅы̸̡̬̱̖̻͓̰̼͈̼̝̙̟͙̐̃̀̎͋̾̋͊̈́̕͘͜ ̸̨͚̘̱̤̘̝̱́̒̀в̵̢̜̟̫̯̝͉͚̹̦͚̥̲͆̇̾̒ͅ ̴̗̟͕̯͍͖̼̲͈̍̍̉̏͛̽̀͒̆̑́̓͠͠ͅͅ.̷̳͎͕͙͖̺̜̺̖̫̝͈̗̲̇̎̔͒̊̾͛̓̿̔̊͝͝ͅͅ.̴͔͙̬͇̜͕̗͓̪͔̭̋͝.̴̧̘̯͕̚</hint>
+            <hint>П̷̛͔̦͍͙̥̻͋̃̓̂̈̈́о̸̨̳̖̬̤̯̙̤͎͈̺͉͎̩̔̒͒̅͋̈́͘т̷̨̫̝̿̑̓̃̆͝͝͠е̷͖̩̩̱̗̮̜̜̹̊̊̑̍͆͛̂́̅̊̇̎̋̈͜͝р̵̢̦̩̹̣͓̱̫̮͓̏̑̓͆̌̈͒̊̈́̃́͠ͅя̴̢͙̘̥̥̦̘͈̭̤̫͉͚̈́͗̉̎͗͑̐́͂͌͗̆̎͂̕͝͠ ̵̢̛̛͚̺̙̙̾̉̌͆̽̽̌͛̂͠с̷̧̢̳̠̖̲͙̭̺͙̂̉͐̈́͋̈́̑͗̇͐͐͐̌͝и̵͕̥̩̪̱̗̠̦̰̺̎̊̃̆͑͝г̴̡̙͇̝̠͎͖͇̯̪̠̙̦̰̰̮͑̇̀̄̾͆̀͘̕͝͝н̵͔͈͍̹̲̰̾̔̈́͂̏͗̋а̴̢̢̲̜̗̞̲̬̘̹͉̮͉́͌̓̏̇̈́̄͆̾̏̚͜ͅͅл̵̢̯̯͖́́͂̾́̈́а̴̛̫̼̮̝̖͔͎̞̤̫̱̻̗͇͆̈́̂͊̿̄͋̑̌́̈́́̿̾̕͜.̴̧̢͈͉̮͓̥̞̬̜̟͚̱̰̖̬̤͐̃̓͌̀̇̅̋̿̚.̷͇̬͓͗͌ͅ.̷̛̩̝͉̪̫̬̬̰͎̜̑̆̍̓̅͆̿̔̿̒̐̿</hint>
+            <hint>Ŝ̶̛̞̫̞̮̇̎͐̅̈͒͝A̶̡̠̹̜̾͗͆́̇̏̏̕̚͜͝M̶̮͉̫̗̬̳̤͈̩̾̂̇͗̽̋̍̐̽̂̿̀͒͜͠P̷̧̧͍̞̥̦̘͋̌̀̑̍̄͑͒͝Ļ̶̛̲͚̟̫͎̪̳͔̖̭͙͉̠̥͐̑͊̉́͆̆̆Ȩ̴̮̘̘̣̲̤̣̀̊͊̔̀̄̊̋͗̓́̾̈́͘͘͘͜͝ ̴̡̞͕̲̬̦͙̞̣̟̱̲̳͉̮̊͑̌͊̍̔͐̉̽̓̇̔̾̕͜͝͝T̶̳̦̝͎̟͍͕̩̦̉̉͌̔̎́Ę̵̢̗̥͇͉̳̱̘̦̥̣̼͍̗͚̾̅̾͂̅̀͛̐̇̅̓̕͘̚͝X̶̛̖̩T̶̛̖̒̿͝</hint>
+            <hint>H̵̗̃̔̓̅͘Ȩ̵̺̯͉̭͙̞̳͕̳̬̠̺̲͕̂̐̐̍͐̈́̔̍͆́͊̀͒̊͆Ĺ̵̨̙̺̰̱͔̽̔̈̆͋̊̄̚̕Ḻ̵͌Ó̵̧̡̢̳͔̩͇̰̪̥̱̐̿̎͌̊̊͊̇͘͝,̴̘̦̆͋̀̂̄̈̂̆̈́̇̑̉̊̆̋̕̚ ̷̭̼̬̜͚̝̰̣̻̦͙̎͜ͅM̴̧͍̪̯̗̘̩͊̀̽̊͊̌̌Y̶͇͈̞̟̦̘̮͔̜̪͓͇̞̫̐̿ͅ ̸̛̯͔̺̪͉̻͚̌̆̇̀͊̊̑̽̐̊̕̕͝͝͠ͅC̴̫͔͇̆͊̈͂̀R̵̨̼̬̝̜̣̘͉̗̻͍͓̎́͆͘͝͠ͅU̷͙̙͒̇̍̐̉̾̈́̂̈́̊̕̕͠͠Ȩ̵̮̣̞̭͎̭̰̖̺̭͍̙͓̮̺͖͐̄͝͝͝L̸̹̯͒̓̑̋̿̂̓́̽̌͒̀̿͋͐̚͠
+                ̴̝̠͙̘̖̲͙͙͓͍̼͂͜ͅW̴̨̧̡̘͎̳̼͖͉̑̇̇̈́̓͆̑̉̂͘͝O̸̧̡̠̟̙̳̣̙͌R̶̭̙̻̞͎̦͔̜̬̮͓͈̞̅̍͊̏́̈́̾͝ͅĻ̴̯̝̞̟̲͙̝͍͉̰̭̝̩̈͌̑̔͆̀͑̅͊̇̒͘͜͝Ḑ̴̨̨̧̛̠̬̠̘͖͈̒͑͑̎̅̃̚͘͝</hint>
+            <hint>Р̵̨̢̛͕͖̞̣̘̻̮͊͐͆̆̉̂̓̓̍̉͒̋͒̕̚͜ӑ̸̢̛͖̜͕̣͇̮̈́̀̿͛̿̕͜͝з̴̟̫͖̫̞̦̫͔̜̩̫̮̖͍͊̀̿͒̐̉̕͠.̶̗͔̭̥̈́̑̔̓͠.̴̮͌̍̈̔̓́͗̈́̃͊̅̈͑̓͝͝.̷̳͖͓̞̯̞͎̣̳̄̍̎ ̴̢̛̳̯̫̦͍̚д̵̢̧͚̭͖̖̥̻̥̰̬̪̘̻̙͓͒͐̋̾̽в̷̡̡̫͚̯̞̭̥̥̮̼̥̤̻̃͊̾̈̀͜а̷̛̤̮͉̪̤͈̖̞̼̜̮̺̳͉̰̄̓̈́̔̓̒̒͐͂̋̔̔̓͊̃̕.̷͇̤̰̖̯̣͛̓̌̚͠.̷̧̧̧̟̘̥͙̹͈̫̗̼̭͍̙̖̲̓̇́̅̏̿͑̽̏͛͒͘͘̕̕͝.̷̧̥͓̞̞̲̼̯̜̝̦̲̟͐̀̀͊̀̽̋̓͘͠
+                ̸̻͍̝͙̱̝̜̰̤͍͉̭̄З̸̧̨̢͚̰̜̼̠̠̣̮̟̐̾̽̅̇͝ͅЕ̷̛̛͇͚͉͈̭̞̰̝̂̈͒̒̆̒͒͛̅͝О̴̦̰̣̰̙̪̿̋͐̓͐͒͠ ̶̨͎͔̞̲̘̭̉͌̉̄͒̾̅̆̄̊̇͜͝з̸̬̰̮͚̱͖́̄̆̽̄̉̓͌̏̉̈͆͝а̶̢̫͕͓͉͔͖̿̈́̋̚ͅб̸͈̀̓͌̂͂̉́̅͛̇̎̄͋̕̚͝ͅе̶̨̻͓̠̬̪͖͕̟̘̮͖͖͛̏͑̒̎̋̊͋̊̇̈͐͝͝ͅр̵̧̟͓͙͑̓͒̌͝е̷͇̬̘̦͓͈̯̲̊͐̎̒͆̋̉͗ͅт̶̢͎͓̱̦̗̜̩͈̱͖̂̓̂ͅ ̴̨̧̛̲͍͙̹̱̼̬̞̂̊̍̀̔̐̊̓͌̔͆͒͆͗̕̚͜͜т̴̭̹̰̝͛͒͆̌͑̂̓̒̆̈̓̕̚е̸̤̔б̵͎͌͆̎͋͐̚я̵̧͉̭̝̥͕͇̻̜̣̞͛̈͜͝</hint>
+            <hint>Ж̷̧̛̹͓̂̿̇͋̇̓̊̀̀̏̑̾̈́д̵̳̩̣̻̟͛̊̉̆̓̏̈́͐̆̅̑͘̕͜ͅа̶̧̛̬̗͉͓̝͈̖̖̞̗̰̤͕̝̺̒̿͑̐̽̒͒̑́̇̉̉̏́͘ͅл̴̬̯̜̦́͒̀̃и̷̢͔͈͖̖̻͇̾̈͆̄́̄̓̏͊̿̓̚͜͝͠ ̸̢̡͕̙͈͕̖̖͍̊̈́͋̃͒͋͌̆̚͝ф̷̢̡̧̛̹̗̪͈͖̥̝̼͔͂̈́̋̆̊̐̌͊͋̊̈́̍̾̚̚͜ͅе̵̢̢̛͕̹̯͓̻̤̦̝͍͎̼̳̔͂̈̄̍̅̔̉̍͘͜͜͝͝ͅр̶̛͔̲̙͇̤̜̊͝м̵̛̻̞͙̾̍̂̆͆̏͛̅̆̓́́̕̚͝у̷̯͓̼͉͖̩͚͎́͊͊̔͌̈́̋͑̾̕͘ͅ?̴̨̡̨̼͓̮̟̥̹͈͉̮͎͈̠́̉̃̂̉̇͋̃̾͑͠
+                ̴̱̩͓̯̾̄̚͜П̷̧͙̯̞̗͕̗͖̻̜̬̩̪̞̒̈̿̓͛͋̓̋͐͘͘͠͠ͅо̶̜̦͗̍̇̀́́͌́͘͝͝л̴̛̩̖͇̟͚̺̤̘̳̤̃̓̅̈́̍̊̃͘у̵̢̢̟̲̙͓̞͓̪͎͉͎̦̦͐͋̍ч̸̧̗̰͍̘̦̙̮͈͛̔̎͒̇̈́͛͘и̷̛̞̝͑̏̔̊͛̄͒̽͑̚͝т̷͙̍͊͛̅̈́̂̓͠е̴͔̟͉̘̟̏̑̂̆̎̌̀͐ͅ ̸̱̑̓̐̊̀͒͗̓͂̒͠н̶̩̪̾͋̆̓͌́̾̒̿̈́͑̈́̈͠͝е̶̳̭̤̼͔̟͙̓̌̌̍̃̍̑͗̀̇́̃̂̏̕ч̷̧̥̝̺͉̱͖̼̤̲͔͖̲̹̱̽͌̚т̸̙̟̻̳̝͎̙̫̰̟̝̝̰̽͌̏̈́͊̎̍̀͛̍̀͐̍͘͝о̸̡̛̖̫͔̫̩̩̖͍̅̎͆́͗͠͝͠͝
+                ̶̪̠̄о̵̛̟̟͓͙̱̦̬̌͆̂̍̅̐̀̉̽̍̕͠͝с̷̡̼̫̼̘̞̞̪̱͈͖̲̈́̄̎̚͜͝ͅо̶̧̯͇͕̗͈̝̫̹̭̰̤̘̘̾͒̊ͅб̷̪͍̫̂͊̒̋͝е̵͍̝̯̪̻̅̄̈̈̂̋́̇̇ͅн̷̛̮͈͈̓̈́̊́̒͝͠͠н̴̛̩̀̃̓̅́̉͘о̷̛͉̒͒̄̅̃̑͘͝е̸̠͆̓̀́͊̿̀̈́̔̔͑̋̒͠͝!̴͎̙̠͚̱̟̫͍̰̲͌̏̽̇͠</hint>
+            <hint>[̷̠̱͈̊͊̎̄͋̋̿̚͘͘͠Д̵̡̤̯̺͎͈̘̦͙͉̙͙̙̣͇̤̠͊̂͗́̌̑̑͒̆̑͐̏͘͝А̸̡͇͚̠̮̝̥̪̼̰͖̙̻̗͔̇̔̈́͝ͅН̷̢̣̠̺̖̱̤͇̼̺̣̬́̍̀̓́̄̈́̉̍̈Н̸̨̤̳̭̙̪͙̩̥͎̱͔͎͌̃̑͜͝Ы̴̩̘͖̦̰̘̳̠̥͇̦̫̀̐̈́͜͠Е̷̨͖̬̟͖̼̖̜̣̠̿̈́̃ͅ ̵̖̪͈̹͂̈̾̀̉̔̽͌̆̇̎̃̓̾̀͘̚ͅУ̷̨̛̗͒͌̇́̏̿̈̒̃̃̈́͌̈́̍̚Д̵̡̖͖̞͈̠͚̺̼͇͖̳͚͕̹̒̊͂ͅА̶̗̻̹̱̯̲͚̣̮͒̎̔̋̈́̐̍̐́͜Л̵̨̧͓̼͔̰̘͍̟̬̹̘͓̣̗̋͜Е̸̭͇̅̏̇̀̄̍͂̍́̈͐͋̏̊̑̈͠Н̵̙͍̹̥͕͙͚̳͚͚̗̈́̀̊͒̽́̇́͌͛̕͜͝Ы̵̛͍̟̰̦̥̳͖͎̓̈́̓̓̉̊͠]̷̰̜̈̿́́̌̏́̌͐͌̔̈́̋̕̕̚</hint>
+            <hint>О̴͎͉͓̗̤͚̬̘̪͖̳͉̀п̸̢̡̧̪̩̜̘̠̩̭̪̤͍̲̻̬̻́̇̆̓̔у̵̢̢̥̫̼͚͈̝͇̦͕͇̿̑̊̈́̾̈́̈́͊̚ͅб̴͙͍̫̩̮͔͙̿̏̓͊̈́̎̔̓͜ͅл̷̺̀̾̈̈́̓̓̐̐̃̆͌̐̾͘̕и̵̧̙̼͍̟͍͇͔͂̇͛̈́̉͌͜к̴̢̛̼̗̭̯͙̖̳͎̲̺͔͚̔͗̂̒̃͝ͅо̶̧̡̰͉͕̣̗̰̪̞́̊̀̈̽̓̆̓̑̚в̵̡̝͈̮͕͉͍͖̱͎̜̬̳͙̯͒̍͋̈͝ͅа̴̪̘͙̖̘̖͕̗̜̉̅͝͝н̶̧͕̱̝͚̾̈͂̀̾̚͜и̵̡̞̻͉̥͚̩̾̀̀̑̑̓̄̕е̷̦̦̬̝̜̯̲̤̹̞̲̘̦͕̭̟͂̀̒̀̀͆̎̀̐̈
+                ̶̡̧̡̢͕͔̭̙͙̲̺̘̙́͜с̸͙̳̬̆͒̔̓̀̽̍̒͌͝п̶̖̥̟̙͉̜̤̣̘̜̈́͌̅̌͛͆́̌͛̐͊͗̐́̑̓͘о̵̧̲̺̹̹̙̱̥̖̣͓̟̬̰̗̘͂͒͌̎͑̋͋́й̵̧̞̟͈̺͔̞̤͕̓̑̀̈́̇̔̓̀̔͂̍͐̍͌͗̓͠л̶͉͉̮̦̫͓̙̞͓̗̝̉͊͛̔͐͑͂͐̈́̏͋̽̍͑͝͝е̸̖̼̳̜̳̪̄̓͂̍̈́р̸̙̰͙̳̠͎̪̘̩̯͎̥̻̩̭̀͐̓̑̈́̈̏̑͠͝о̷̧̢̨̛̛̫̣̤̹͉̻̍͊̄̿̅̈́̃̃̐̒͊̊̚̚͝в̷̧̺̦̯͔̹̦̮̐̈́̉̋̅̏̌̕ ̶̡̙͉͍̺͓̲͇̗̪̲̜͐̀̂̅̊̈́͒͐̀̚͘̕͜͠͠ͅͅг̵̧͙̟̤̰͂̊̃̉̈̈̆̽р̷̨̛̤̯̣̻͈̻͖̽̐̆͛̇͒̆̒̓̐͑̄ӧ̸̛͖̱͇̫̥̟́̐̈̀̀́͑̽̄̽̀̚͝з̷̢͍̟̭̬̫͍̳͖̗̌̀̀̿̍̔͑̎̐̌̚͝ӥ̷͔̺̠͖̳̺̺̖̰͙́̒̄̓т̶̛̛̟̤̠͓̣̯̳͂̒̄͐̆̈́̅̈́̎̋͛̑͐̅͝ͅ
+                ̸̢͈̦͇͖̱̪̙̤͎͉̳̮͖̱̣̺̄͒̉̓̉̉͒н̷̨̘̥͎̬͇̳̱̕е̶̨̣͕̦̱̠̳̹̖̭͗̀͊̅̊̓͋̊̈́́̽̈̚͠п̸̨̩͙̠͇̘̦̩̪͎̺̃̒͆͂̽̌̉͛̾̍̂р̶̨̧̨͚̥̠̠͈̤̙̰͉̖̹͙̼̆е̸̱̍͗д̴̮͔̠͕̰͈͓̖͌́̈́̇͛̏́̔́̀̊͗̐̔̕в̶̧͇̈́̆͊̃͗и̶͕̼̥̔͋̏д̸̞̖͚͍̭̋̋̂̓е̵̢̨̨̲̯͚̜̣̥͔̺̮̦͙̣̝͐̀̉́͌̏̽̋̎̓̈́͊̕͘ͅн̸̧̨̛̺̜̮͙͇̰̟̺̱̣̙͖̜̾͊̏̍̒̀͌̂̅̽̈́͆̈́́̕͠н̷̩̤̻̖̍͑̇̽͋͘͝ы̶̲͍͇͇̜̭̄̾́͛́̈̒͊̋͘̚͜ͅм̷̲̤̺̤̩͓̇͆̽̑̈̚и̶̠͖̩̲̇̽̏͊̓͗͂̕͘͝͝ͅ
+                ̸̧̓͒̀̌́̀͊̒͑͐̂̿̂̏̕͠͝п̴̰̲͓͓̤̻̈́̒́͌̂͐̕͝ͅо̶̡̛̻̩̮̣̰̙̞͙̠̣̯͍̓́̽̈́͑̈́͗с̵̠̩̥̺̹̦͖̹̱̻̱͕̿͐̂̈͌͗̌̾̿͜͝͝л̶̧̨̳̞͈̺̲̜͕̗͍͇͎̳̜̂͋̄́̂̓̑͛͜͜е̵̤̼̳̟̲͔̺̻̓̍̍̍͛̓̒̔͋̎͛̐̾̑͘̚̕ͅд̷̦͈̩͚̩͙̘̖͒̔͐͑́́̾͌͋͛́̎̏̈́̑с̵̮̫͓̟̥̲́̑̒̿͜т̸̧̧̫̠̯̠̼̞̭̖̯̦̰̦͒͆͛̇в̴̛͈̓̄̏́̾̑и̶̡͙͚̲͚͖̪̗̫͍̔̆̅̆̌̐̽̓̃я̷̧̳͂̿͊́̈͊̈̓̉̐̇м̶̱̺͈̼̼̫̄̄̽̈̌͗͝ͅӥ̶̡̯̘̤̠̣͍̭̦̺̏̇͛̚͝͝</hint>
+            <hint>С̸̗͕͉̟̺̙͔̳̃̾̾̒͛ч̵͉͖̲̲̤̌́͆̓̋̽̄̈́͝и̵̡̡̡̢̗̯̤͖͉͓͇̟̓͐̇͑̍̊͑̑̇̈́̕͠т̴̧̞͇̩̹̻͙̠̬̪̩͇̰̖̹̄͘̚͘ͅа̵̡̡͍̰̩̩̺̘͙̪̦̊͐̀̂́͒̎̌̂̀̀̽̆͛͠ͅе̴͙͋̎̏̿͠ш̴̛̦͓̣̮̥̜̫͖̼̬͙̥̍̏̿̀̃̊̈́͑̽̈̃́̓́͜͝ͅь̶̦͈̺͇͛̉̄͊̑̎͒̉̃̅̇̔͜,̸̨̤̖̙̏̍̊̔͊̿͝ͅ ̵̡̯̲̼̞̪̮͉̦͇͉͖̌̍̒̂̈̎̆̓͝ч̴̛̫̯͈̥̫̩͚͉͍̱̩̌̌̂̓̂͊̃̐̿͆̈́̋̚т̸̢͎̜̪̹̳͎̼̩̟͍͓̂̿̃͌̉о̸̫̥̼̎̅͒͐͊̉͌̀̔̐̿̔̏͐̀͆
+                ̴̨͍̹͖̠̹̳̺̟̟̟̱́̎̑̌̈́̓̓̽͒̆̾̇͋͊̔̊͠с̸̧̨̯̟̟̭͙̥̭̳͔̣̋̄̈́̀̀̓̅̓̉̈̓̾̚ͅͅм̸̮͍̼͚͍̜̝̙̭͕̦̐́̄̓̏̌͂̐͛͛̆͒̾͘̕̚͝о̴̨̡̹͕͇̘̘̺͇̭͍̳̄͂̿̈͂̇͐̊̉̔͊͘ͅж̴̧̲̣̼͚͇̰̬̱͎̉̾̆̄̈́̎͛̈͐̾͆̑̾͝е̵̧̪͆̈́͒͛ш̷̡̧̞̩̼̝̠̩͔̥̭̼̣͎͈̎̐͆̔͗̍̌́̅̕͝ͅь̷͓̺̭̣̼͉̗͇͓̟͛͜ ̵̠̞̙̙͍͇̰̳͚̏̒͠п̷̧̠͕̰̭̯̫̝̙̦̿̔͌̋̌̉ͅо̴̞̫̣͇̄̈͗̃͘͘͝ͅб̶̧̩̤͖̻̻̯̲͈͐͑͒͋̚ͅе̴̝̲͉͈̟̻̅̋̍̔͗̒̐͗̀̈̓̅̇͑͊͝͝д̶̧̞͈̮̭̤̺͓̭̼̔͌̆͜ͅи̷̢̛̹͇̯̘̰͈͙̜̜͙̖̥̂̇̄͛̚т̵̬̬̥̻̱͚̟̟͛̍ͅь̶͔̘̹͑͑̑͌͂̓̓
+                ̵͈͚͈̳͙̰̲̩̳̯͚̳̠̉̋͠ͅͅа̵̛͇̯̟̀̀̔̇̾͆р̴̡̠̘͙͔͖̼̌̒̍̿͂̀͛͌̌̈́̒͘͘̕͘͝ͅͅм̵̡̥̬͎̥̻̣̺̞͙́̂̍̾̅̃̒̄̍͑̃̈́̒̑̚͝и̸͙̳͓̫͈̞̙͚͉͚̭̘͈̹͇̌͐̅̃͊̉̏͆͐̒̚͜͝ͅю̸̨̨̡̛͈̜̲̭̤̭̰͈̬̟̺͔̤͊̀ͅ ̸̡̞̣̑̾̑̉͆͐̍̂̄̓͛̉̕т̷̢̫͕̱̲͈̜̖̹̟̻͍̲̈́̑̄́͑̔̕̚͜͠ь̷̛̲͉̥̪̉̃̓̎́͋́͝͠м̶̧͎̮̱͖̠͍̗͉̹̦̭̞̲̅̐͒̾͆̇̀̌͌͝ͅы̸̡̜̠̹͈̠̪͙̖̫̩͍̒͊͋͌̂̕͜͠?̵̻̹͕͔͖̲͔̻̍̋̈́̉̃̓͆̄͗͗͜͝͠͠</hint>
+            <hint>Э̷̧̡̧͓̖͈̘̻̞̫̖̙̻̱̮̟̋̃̇̀͛͒͊͊̈̋͊̚ͅт̶̧͇̊а̴̡̧̢̰͉̙̻͍͍̟̼̑ ̴̭͛̚̚ӓ̸̡̨̞̫̳̝к̵̺̹̟̈́̐̾̋̓̾̊̈́̑̏͑̔ц̸̰̓̑̽͊͐́̄̐͐̊̕̚и̴̡̢̖̝̦͕̦̼̰͉̯̲̤̬͕̱͌̕ͅя̶̲̳̩̠̋̅̔̈́̈́͛̐̃̏̿̔ ̷̧̲̭̥͉̲̤̻̭̃́̅̔̋̿̇̀̍̅͛̑̔̐͘с̸̢̧̠̗̘̞̟̫̪̖̗̂̏́͆̈́̄̃л̵̡̨̢͖͔͙͔̞͙͇͕̍̏̓́̈̉̐͆̒̊͌̃̓̕͠ͅо̸̬̦͓̤̫͍̲͈̪͙̟͚̝̗͔̪̙́̒̈́̎̇͆̎̚͘͝м̵̛̛̘̤̻̘̞̝̆͑̒͒̍́͆̈́͗͘̕а̸̛̼̪̲̓̈́̒̎̌̎́̑л̵̼͍͕̣̯͎̥̫͔͍͚͓̣̖͔̈̃̐̂͐̈̔̚͘ͅа̷̛͈̤̼̮̞͎͙̩͍̫̇̎͂̿̔͊́͑̍̂̌̉̃̊̀̕с̸̧̝͍̲̬̼̭̯̗̙̟̝̱̤̂̌̉͜ь̸̧̢̫̬̞̝͍̪̞̈́̊͛̋,̸͎͍̝̞͙̉͋͑͘̚͝ͅ
+                ̸͉͔͔̥̼̬̪̪͈̻̗͕͇͎̋̚н̷̨̨̥͓̜̙͉͚̰̳͐̍͑̀͑͊̀̏̎͘͘͜е̵͍̺̜̝̔̄ͅс̷̢̧̦͈̜̲̦̬̥̦̞̝̈́̀̉̈́̏͌̑ͅи̴̰̯̣̣̾̈́̑͛̓͘̚т̸̛̲̪̟͔̮͎̱̦͑͒̆͂͂̋͌̈́̏̑̾͝͝е̵͍̱̯̯͓͕͖̼̳̺̖̞̠̺̝̞̐ͅ ̶̡̤͓̹͇̠̬̗̃́͗̊́̍͌̌̉́̂͝н̶̧͇̺̜̪̺̜̻͎͈̉͒̏̋̀̑̀̇̃͐̋о̷̯̫̭͆̆̈́̀̊̉̈́͛́̇̈́̌̈́̕͝в̴̮͂̓͒̋̈́у̸̱͕̬̮̺̱͔̬͎͆̌͐͛̄̍̂̋̈̋͌͐̿̒͝ю̴̨̧̰̟̯̺͙̠́̃͆͆͑̃̍̓̈́͜͠ͅ!̵̱̲͔̦̗̠͍̠̲͚̥̐</hint>
+            <hint>Н̴̘͇͒̇е̷̢̡̧̗̩̝̗͖̗̫̦̳̱͒̈́̍͋͜ͅ ̵̰̪͔̹̄̂͆̒͌͝с̶̡̧̗̼͈̘̙̮̩̼͔̰̭͍̪̺͆͊̂̑͐͊͆̈̈̈́͗͊̎͝͠͠о̶̢̧̬͙̘͉̻͕̙̰̹͕̜̳͇̱͈͒͌̀̂в̵̟̦̤͍̑̎̀̉е̶͇̪͕̝̪̫̥͈͖̟̟̼͈̒̽̈́͐̽̈́̀͒͠т̸̧̛͔͚̜̰͙̜͉͍͚̪̘̳͎̈́͋̎̒́̀̾͊̓̍̚͝у̸̞̝̜̰̩̲̿̚͘ю̵̧̡̧̨̛̙̯̥͇̮̰̩̦̞̞͙̼̀̏̀́͛͊̃̈̕͝ ̵̡̬̖͔̻͓͕̜̞̻̲͕̦̦͒͌̐͆̃͜с̴̭̯̠̹̩̰̥̫͇̩̩̱̳̯̖̭̀̍͑̔͘н̵̡͙̻̯͍̠̰͖͔͖̹̎ѝ̴̧͉̲̝͙̜͔̘̤͔͙͗͒̍̈́̋̉̔̀̇̔̇͛̓͌͠͝м̶̬̠̦͓͊͐͑̓̏͐а̴̡̡̱͇̝̟͛̌̏̿̏̅̂̌͒̏͂̆̍͗̕͘͝ͅт̵̡̘̙̺̰̹̠͑͂̒́͑̐̇̊͘ь̴̢̪͓̪̤͖̖̗̯̳͖̘̻̀͌̅̚͝͝
+                ̶̧̲̭̥̥̺̹̖͎͓̼̥͔̟̱͋͛̂̔̒̽͗̈̀̿̏̏̎͘͝͝э̵̨̛̦̩̝̱̥̣̮̻̤̖̯͋͛̑̀̈́̄͒̈́̉̆͛̀̈́͒͘͠ͅт̸̛̗̣̮͛̃̋̋͑̀̿̃͊͋̈́͘̚͘̚͜͜͠о̵̡̨̮̫̼͔̞̫͔͔̙̭͎̱̩́̇͋̍̍̓̓̿͆̒̊͝ ̴̨̮͚̤̠̪̤̞͓͖̘̘̖̜̍̐̀̊̓̈́̊̎͋̒̏͠͝ͅн̸̛͎̌̈́͊̆̊̓̑́̓̓̚͘а̸̗̹͕͖̬͒̂̾̎̍̅͌̽̀͂̿͋̕ ̴̢̲̣̤̪͆̄͗̔͂̿̂̏͗̿͘̚͝͝͝к̷̨̧̩̭̪̮͍̹̩̭̱̲̬͕̣̑̔̐̆͆̀͑̃͊͛̀̐̓̔̀͌̚͜а̶̼̤̳̳̜̠̓м̶̫̯̪̄̇̓̉̋̽̈́͛̂̿͛̋̔͘̚е̸͉̄̈́̒̑́́̒р̴͎̗͆͐̾̐̒̍͂̓̒̊͛̃̑̋̚͘͝ӱ̶̪͚̱̪̳͇̳̲̝́́̅̓</hint>
+            <hint/>
+            <hint>Ț̶̫͂é̶̦̹̻͐̚x̷̪͒t̸͇̘̺̐H̵̬̝́̊͝ë̸͙́͝l̸̨̹͖̀͛p̸̮͊̚ẻ̷͕̘͙́͠r̴̨͉̀.̸͍̳͗c̸̜̗̲̎̽̕r̴̝͑͝ẽ̴̠̻̳̈́͝a̷̼̎ͅt̸̮͓̿͆e̴̦̾̚T̷̥́̊͝e̶̢͒x̷͔̭̮̓t̶̨̚F̷̟̕i̴̧̎̃̔e̵͙̭̕l̶͖̀d̸͖͛́(̶͎͈͍̌0̸̨͔͛́͐,̴̢̢̤̏̋ ̴̗̪̖̇̈́0̴̨̳́̀,̸̰͝ ̷̞̅͆t̸̡̠͉̐͆e̶̝͑̊̕x̵̛̣̠̐͝t̸̡̤̏,̸̢̣͗̈́͜ ̸̯̩̩̽͑T̸̺̬͎̒́͆e̷̗̖̤̒̾x̸̯͇͛ͅt̶̘̫͓̑̿̓H̷̤͎̏̏e̶͉͕̠͝ĺ̴̬̋͒p̵̟̈̓e̴̮͐͌r̸͖̦͑̐͛.̷̨͊̇S̴̬̻̙̾͝Ț̶̉̃Y̵̢̮̤͒L̴̞̻̅͜E̶͖̜̖̋́͌_̷̧̤̞̿M̷̙̈́̀̇Ơ̸͓͛̿B̸̰̘̍͝I̵̱̯̺̓̑̔L̸̜̅̈͝E̸̠͐_̶̩̝̰̀L̸̥͈͒̄Ö̸͍́A̶̳̐D̶̬͛͛Ę̸̜̋̊͠R̴̬̘̍͌_̵̳̠̩̃͛̓T̶͓̩̜͂͘Ȩ̶̗̑̃X̸̘̪̱̊̆̚T̶̥̩̓̾ͅ)̷̪̣̝̂̀͠;̷͖͉̀̈́̚</hint>
+        </textHints>
+    </preloaderConfig>
+    <!-- <preloaderConfig>
+        <params url="http://cdn-sp.tortugasocial.com/avataria-ru/swf/preloader/MobilePreloader.swf" bgColor="0x1a1d42"/>
+        <textHints locale="ru">
+            <hint>Ты можешь сохранить фотографию события, нажав на фотоаппарат</hint>
+            <hint>Обменивай ненужную мебель на деревья комфорта</hint>
+            <hint>Чтобы устроить весёлую вечеринку с друзьями, нажимай кнопку "Создать событие"</hint>
+            <hint>За вход в игру даются жетоны, которые ты можешь использовать в колесе удачи</hint>
+            <hint>С помощью кнопки "Вестник" ты всегда будешь в курсе актуальных новостей из мира Аватарии</hint>
+            <hint>Если хочешь побыть один, то нажимай кнопку "Закрыть квартиру"</hint>
+            <hint>Убирайся у соседей и получай за это ресурсы для мастерской</hint>
+            <hint>Через паспорт ты всегда можешь сменить имя своему аватару</hint>
+            <hint>Чтобы посетить локацию "Каньон", необходимо купить транспорт из магазина техники</hint>
+            <hint>Вкладка "Рейтинг" всегда расскажет тебе об интересных Топах игры</hint>
+        </textHints>
+    </preloaderConfig> -->
+    <appNotAvailableUrls bgUrl="http://cdn-sp.tortugasocial.com/avataria-ru/promo/error/ErrorMessageZeo.png" />
+    <!-- <appNotAvailableUrls bgUrl="http://cdn-sp.tortugasocial.com/avataria-ru/promo/error/ErrorMessageBg.png">
+        <message>http://cdn-sp.tortugasocial.com/avataria-ru/promo/error/ErrorMessage1_ru.png</message>
+        <message>http://cdn-sp.tortugasocial.com/avataria-ru/promo/error/ErrorMessage2_ru.png</message>
+        <message>http://cdn-sp.tortugasocial.com/avataria-ru/promo/error/ErrorMessage3_ru.png</message>
+    </appNotAvailableUrls> -->
+    <!--  Servers  -->
+    <adminServer>api4.vk.avataria.tortugasocial.com</adminServer>
+    <adminPort>8123</adminPort>
+    <outsideServer>api4.vk.avataria.tortugasocial.com</outsideServer>
+    <outsidePort>8123</outsidePort>
+    <houseServer>api4.vk.avataria.tortugasocial.com</houseServer>
+    <housePort>8123</housePort>
+    <clanServer>api4.vk.avataria.tortugasocial.com</clanServer>
+    <clanPort>8123</clanPort>
+    <workServer>api4.vk.avataria.tortugasocial.com</workServer>
+    <workPort>8123</workPort>
+    <billing>
+        <currency label="votes" pointsRate="700" goldRate="70" />
+        <products>
+            <product id="goldCoin" points="70" gold="1" bonusGold="0" icon="OfferGoldPack10@ui" tag="" />
+            <!--  GOLD PACKS 23  -->
+            <product id="pack23Gold30" points="2800" gold="30" bonusGold="0" icon="OfferGoldPack50@ui" tag="mainDialog,group0,group1,group2" />
+            <product id="pack23Gold80" points="7000" gold="80" bonusGold="10" icon="OfferGoldPack100@ui" tag="mainDialog,group0,group1,group2" />
+            <product id="pack23Gold200" points="15400" gold="200" bonusGold="50" icon="OfferGoldPack200@ui" tag="mainDialog,group0,group1,group2" label="topSale" />
+            <product id="pack23Gold600" points="46200" gold="600" bonusGold="180" icon="OfferGoldPack500@ui" tag="mainDialog,group1,group2" />
+            <product id="pack23Gold1000" points="70700" gold="1000" bonusGold="450" icon="OfferGoldPack500@ui" tag="mainDialog,group1" />
+            <product id="pack23Gold2000" points="0" gold="20000" bonusGold="11000" icon="OfferGoldPack50@ui" tag="mainDialog,group2" label="bestPrice" />
+            <!--     notEnougth  -->
+            <product id="pack2500" points="175000" gold="2500" bonusGold="1200" icon="OfferGoldPack500@ui" tag="notEnougth" />
+            <product id="pack5000" points="350000" gold="5000" bonusGold="1600" icon="OfferGoldPack500@ui" tag="notEnougth" />
+            <product id="pack9999" points="700000" gold="9999" bonusGold="3300" icon="OfferGoldPack500@ui" tag="notEnougth" />
+            <!--   SALE PACKS  -->
+            <product id="packSale10" points="700" gold="10" bonusGold="0" icon="OfferGoldPack100@ui" tag="campaign" />
+            <product id="packSale50" points="2800" oldPoints="3500" gold="50" bonusGold="0" icon="OfferGoldPack100@ui" tag="campaign" label="sale" />
+            <product id="packSale100" points="5600" oldPoints="7000" gold="100" bonusGold="0" icon="OfferGoldPack200@ui" tag="campaign" label="sale" />
+            <product id="packSale200" points="11200" oldPoints="14000" gold="200" bonusGold="50" icon="OfferGoldPack500@ui" tag="campaign" label="sale" />
+            <product id="packSale600" points="29400" oldPoints="42000" gold="600" bonusGold="200" icon="OfferGoldPack500@ui" tag="campaign" label="topSale" />
+            <product id="packSale1000" points="45500" oldPoints="70000" gold="1000" bonusGold="350" icon="OfferGoldPack500@ui" tag="campaign" label="sale" />
+            <product id="packSale1500" points="77000" oldPoints="105000" gold="1500" bonusGold="600" icon="OfferGoldPack500@ui" tag="campaign" label="sale" />
+            <product id="packSale5000" points="210000" oldPoints="350000" gold="5000" bonusGold="1500" icon="OfferGoldPack500@ui" tag="campaign" label="bestPrice" />
+            <product id="packSale9999" points="350000" oldPoints="700000" gold="9999" bonusGold="4000" icon="OfferGoldPack500@ui" tag="campaign" label="sale" />
+            <product id="packSale50_40" points="1400" oldPoints="2800" gold="40" bonusGold="0" icon="OfferGoldPack100@ui" tag="campaign" label="sale" />
+            <product id="packSale50_100" points="3500" oldPoints="7000" gold="100" bonusGold="10" icon="OfferGoldPack200@ui" tag="campaign" label="sale" />
+            <product id="packSale50_200" points="7000" oldPoints="14000" gold="200" bonusGold="25" icon="OfferGoldPack500@ui" tag="campaign" label="topSale" />
+            <product id="packSale50_600" points="21000" oldPoints="42000" gold="600" bonusGold="100" icon="OfferGoldPack500@ui" tag="campaign" label="topSale" />
+            <product id="packSale50_1000" points="35000" oldPoints="70000" gold="1000" bonusGold="250" icon="OfferGoldPack500@ui" tag="campaign" label="topSale" />
+            <product id="packSale50_2000" points="70000" oldPoints="140000" gold="2000" bonusGold="500" icon="OfferGoldPack500@ui" tag="campaign" label="sale" />
+            <product id="packSale50_3000" points="105000" oldPoints="210000" gold="3000" bonusGold="800" icon="OfferGoldPack500@ui" tag="campaign" label="sale" />
+            <product id="packSale50_4000" points="140000" oldPoints="280000" gold="4000" bonusGold="1200" icon="OfferGoldPack500@ui" tag="campaign" label="sale" />
+            <product id="vipPack30" points="2100" gold="30" bonusGold="5" vipDays="1" icon="OfferGoldPack30@ui" tag="campaign" />
+            <product id="vipPack70" points="4900" gold="70" bonusGold="15" vipDays="3" icon="OfferGoldPack50@ui" tag="campaign" />
+            <product id="vipPack120" points="8400" gold="120" bonusGold="35" vipDays="7" icon="OfferGoldPack100@ui" tag="campaign" label="topSale" />
+            <product id="vipPack250" points="17500" gold="250" bonusGold="100" vipDays="14" icon="OfferGoldPack200@ui" tag="campaign" />
+            <product id="vipPack750" points="52500" gold="750" bonusGold="250" vipDays="30" icon="OfferGoldPack200@ui" tag="campaign" />
+            <product id="vipPack2500" points="175000" gold="2500" bonusGold="1000" vipDays="60" icon="OfferGoldPack500@ui" tag="campaign" label="bestPrice" />
+            <product id="startPack1" points="1400" gold="30" silver="500" vipDays="3" tag="onlyOne" />
+            <product id="startPack2" points="69300" gold="1800" silver="10000" vipDays="14" tag="onlyOne" />
+            <product id="startPack3" points="174300" gold="3500" silver="30000" vipDays="30" tag="onlyOne" />
+            <product id="startPack4" points="1400" gold="30" silver="3000" tag="onlyOne" />
+            <product id="startPack5" points="4900" gold="100" silver="1000" tag="onlyOne">
+                <items>
+                    <item id="wtrfll5" count="1" icon="WaterfallDragonOfferIcon@ui" />
+                </items>
+            </product>
+            <product id="startPack6" points="10500" gold="220" silver="5000" tag="onlyOne">
+                <items>
+                    <item id="wtrfll3" count="1" icon="WaterfallHomeOfferIcon@ui" />
+                </items>
+            </product>
+            <product id="startPack7" points="21000" gold="500" silver="5000" tag="onlyOne">
+                <items>
+                    <item id="wtrfll4" count="1" icon="WaterfallFountainOfferIcon@ui" />
+                </items>
+            </product>
+            <product id="startPack8" points="69300" gold="1800" silver="10000" tag="onlyOne">
+                <items>
+                    <item id="dram1" count="1" icon="DoorPortalElfOfferIcon@ui" />
+                </items>
+            </product>
+            <product id="startPack9" points="174300" gold="4500" silver="50000">
+                <items>
+                    <item id="wllAq1" count="1" icon="WallAquarium1OfferIcon@ui" />
+                </items>
+            </product>
+            <product id="salesRefPack" points="8400" gold="50" silver="10000" vipDays="100" />
+            <product id="unbanPack1000" points="70000" unban="1" gold="0" tag="unban" label="1000 gold coins" />
+            <product id="unbanPack3000" points="210000" unban="1" gold="0" tag="unban" label="3000 gold coins" />
+            <product id="unbanPack5000" points="350000" unban="1" gold="0" tag="unban" label="5000 gold coins" />
+            <!--  Subscriptions  -->
+            <product id="subVipPack1" points="4900" vipDays="7" subscription="true" />
+            <product id="subVipPack2" points="17500" vipDays="30" subscription="true" />
+            <product id="subVipPack3" points="44100" vipDays="90" subscription="true" label="bestPrice" />
+            <product id="subSaleVipPack1" points="3500" oldPoints="4900" vipDays="7" subscription="true" label="sale" tag="campaign" />
+            <product id="subSaleVipPack2" points="11900" oldPoints="17500" vipDays="30" subscription="true" label="topSale" tag="campaign" />
+            <product id="subSaleVipPack3" points="26600" oldPoints="44100" vipDays="90" subscription="true" label="sale" tag="campaign" />
+            <!--  Sale Day  -->
+            <product id="saleDayProduct1" points="3500" oldPoints="5600" gold="80" bonusSilver="15000" icon="OfferGoldPack10@ui" />
+            <product id="saleDayProduct2" points="7000" oldPoints="10500" gold="180" bonusSilver="35000" icon="OfferGoldPack100@ui" label="topSale" />
+            <product id="saleDayProduct3" points="28000" oldPoints="42000" gold="750" bonusSilver="150000" icon="OfferGoldPack500@ui" label="bestPrice" />
+            <!--  Clan Ruby  -->
+            <product id="pack23Ruby175" points="3500" ruby="175" bonusRuby="0" icon="ProductRubyAsset1@ui" tag="rubyShop" />
+            <product id="pack23Ruby350" points="7000" ruby="350" bonusRuby="10" icon="ProductRubyAsset2@ui" tag="rubyShop" />
+            <product id="pack23Ruby1050" points="21000" ruby="1050" bonusRuby="200" icon="ProductRubyAsset3@ui" label="topSale" tag="rubyShop" />
+            <product id="pack23Ruby3500" points="70000" ruby="3500" bonusRuby="800" icon="ProductRubyAsset4@ui" tag="rubyShop" />
+            <product id="pack23Ruby7000" points="138600" ruby="7000" bonusRuby="2000" icon="ProductRubyAsset5@ui" label="bestPrice" tag="rubyShop" />
+            <!--  Bones Shop  -->
+            <product id="bonesPack210" points="7000" bones="210" bonusBones="0" icon="ProductBonesAsset1@cityPetsUi" tag="bonesShop" />
+            <product id="bonesPack420" points="14000" bones="420" bonusBones="20" icon="ProductBonesAsset2@cityPetsUi" tag="bonesShop" />
+            <product id="bonesPack1250" points="42000" bones="1250" bonusBones="100" icon="ProductBonesAsset3@cityPetsUi" tag="bonesShop" />
+            <product id="bonesPack3000" points="98000" bones="3000" bonusBones="400" icon="ProductBonesAsset4@cityPetsUi" label="bestPrice" tag="bonesShop" />
+            <!--  Ruby Sale  -->
+            <product id="rubySalePack350" points="4900" oldPoints="7000" ruby="350" bonusRuby="20" icon="ProductRubyAsset2@ui" tag="rubyShop,campaign" label="sale" />
+            <product id="rubySalePack700" points="9800" oldPoints="14000" ruby="700" bonusRuby="80" icon="ProductRubyAsset3@ui" tag="rubyShop,campaign" label="sale" />
+            <product id="rubySalePack1750" points="22400" oldPoints="35000" ruby="1750" bonusRuby="300" icon="ProductRubyAsset4@ui" tag="rubyShop,campaign" label="sale" />
+            <product id="rubySalePack3500" points="45500" oldPoints="70000" ruby="3500" bonusRuby="800" icon="ProductRubyAsset4@ui" tag="rubyShop,campaign" label="sale" />
+            <product id="rubySalePack9900" points="126000" oldPoints="210000" ruby="9900" bonusRuby="3600" icon="ProductRubyAsset5@ui" tag="rubyShop,campaign" label="sale" />
+            <!--  NY VK 2020  -->
+            <product id="nyvk2020_1Product" points="3500" gold="50">
+                <items>
+                    <item id="nyVk20Gft1" count="1" icon="NyVk20SProductIcon@location" />
+                </items>
+            </product>
+            <product id="nyvk2020_2Product" points="14000" gold="200">
+                <items>
+                    <item id="nyVk20Gft2" count="1" icon="NyVk20MProductIcon@location" />
+                </items>
+            </product>
+            <product id="nyvk2020_3Product" points="35000" gold="500">
+                <items>
+                    <item id="nyVk20Gft3" count="1" icon="NyVk20BProductIcon@location" />
+                </items>
+            </product>
+            <product id="offer22P1" points="4900" gold="50" silver="1000" tag="onlyOne" title="startPack1" photo="http://cdn-sp.tortugasocial.com/avataria-ru/promo/GoldCoin.png">
+                <items>
+                    <item id="specialChatBubble" count="1" icon="BaloonOffer22Icon@ui" />
+                </items>
+            </product>
+            <product id="offer22P2" points="10500" gold="100" silver="3000" tag="onlyOne" title="startPack2" photo="http://cdn-sp.tortugasocial.com/avataria-ru/promo/GoldCoin.png">
+                <items>
+                    <item id="girlGizmi22" gender="2" count="1" icon="GizmoOffer22Icon@ui" />
+                    <item id="boyGizmi22" gender="1" count="1" icon="GizmoOffer22Icon@ui" />
+                </items>
+            </product>
+            <product id="offer22P3" points="21000" gold="150" silver="5000" tag="onlyOne" title="startPack3" photo="http://cdn-sp.tortugasocial.com/avataria-ru/promo/GoldCoin.png">
+                <items>
+                    <item id="aquariumShark2022" count="1" icon="AquariumOffer22Icon@ui" />
+                </items>
+            </product>
+            <product id="offer22P4" points="35700" gold="600" silver="7000" tag="onlyOne" title="startPack4" photo="http://cdn-sp.tortugasocial.com/avataria-ru/promo/GoldCoin.png">
+                <items>
+                    <item id="danceBoyMill" count="1" gender="1" />
+                    <item id="danceGirlMill" count="1" gender="2" />
+                </items>
+            </product>
+            <product id="offer22P5" points="70000" gold="1200" silver="10000" tag="onlyOne" title="startPack5" photo="http://cdn-sp.tortugasocial.com/avataria-ru/promo/GoldCoin.png">
+                <items>
+                    <item id="magicalWavesShadow" count="1" />
+                </items>
+            </product>
+            <product id="offer22P6" points="210000" gold="4000" silver="30000" title="startPack6" photo="http://cdn-sp.tortugasocial.com/avataria-ru/promo/GoldCoin.png">
+                <items>
+                    <item id="razz" count="1" />
+                    <item id="rozeShower" count="1" />
+                    <item id="scare" count="1" />
+                    <item id="tickling" count="1" />
+                </items>
+            </product>
+            <!--  CAMPAIGN SPECIAL OFFERS  -->
+            <product index="2" id="campaignPackSpell2" points="21000" gold="120" silver="5500" tag="onlyOne" title="Мистический набор">
+                <items>
+                    <item id="boySpell23Set" count="1" gender="1" icon="WednesdayBoyOfferIcon@ui" type="clothesSet" />
+                    <item id="girlSpell23Set" count="1" gender="2" icon="WednesdayGirlOfferIcon@ui" type="clothesSet" />
+                </items>
+            </product>
+            <product id="campaignPackArtist23" points="18900" gold="100" silver="4000" tag="onlyOne" title="Набор художника">
+                <items>
+                    <item id="boyArtist23Set" count="1" gender="1" icon="ArtistBoyOfferIcon@ui" type="clothesSet" />
+                    <item id="girlArtist23Set" count="1" gender="2" icon="ArtistGirlOfferIcon@ui" type="clothesSet" />
+                </items>
+            </product>
+            <product id="campaignPackGardener" points="9100" title="Набор садовника">
+                <items>
+                    <item id="clay" count="50" icon="ClayIcon@location" />
+                    <item id="peaceOfWood" count="50" icon="PeaceOfWoodIcon@location" />
+                    <item id="water" count="50" icon="WaterIcon@location" />
+                    <item id="flowerBud" count="50" icon="FlowerBudIcon@location" />
+                </items>
+            </product>
+            <product id="campaignPackJanitor1" points="18200" title="Набор дворника">
+                <items>
+                    <item id="phial" count="50" icon="PhialIcon@location" />
+                    <item id="bigPhial" count="50" icon="BigPhialIcon@location" />
+                    <item id="bow" count="50" icon="BowIcon@location" />
+                    <item id="wrappingPaper" count="50" icon="WrappingPaperIcon@location" />
+                </items>
+            </product>
+            <product id="campaignPackJanitor2" points="33200" title="Набор дворника">
+                <items>
+                    <item id="likeCoin" count="40" icon="LikeCoinIcon@location" />
+                    <item id="photograph" count="30" icon="PhotographIcon@location" />
+                    <item id="swordHilt" count="30" icon="SwordHiltIcon@location" />
+                </items>
+            </product>
+            <product id="campaignPackPhotographer" points="13300" title="Набор фотографа">
+                <items>
+                    <item id="beauty" count="50" icon="BeautyIcon@location" />
+                    <item id="glamor" count="30" icon="GlamorIcon@location" />
+                    <item id="idea" count="50" icon="IdeaIcon@location" />
+                    <item id="muse" count="30" icon="MuseIcon@location" />
+                </items>
+            </product>
+            <product id="campaignPackVisagiste" points="14400" title="Набор визажиста">
+                <items>
+                    <item id="diligence" count="50" icon="DiligenceIcon@location" />
+                    <item id="skill" count="50" icon="SkillIcon@location" />
+                    <item id="industry" count="50" icon="IndustryIcon@location" />
+                    <item id="luck" count="50" icon="LuckIcon@location" />
+                </items>
+            </product>
+            <product id="campaignPackSea" points="17500" title="Морской набор">
+                <items>
+                    <item id="pearl" count="20" icon="PearlIcon@location" />
+                    <item id="shell" count="30" icon="ShellIcon@location" />
+                </items>
+            </product>
+            <product id="campaignPackRace" points="9100" title="Набор гонщика">
+                <items>
+                    <item id="screw" count="30" icon="ScrewIcon@location" />
+                    <item id="wrench" count="30" icon="WrenchIcon@location" />
+                </items>
+            </product>
+            <product id="campaignPackMinigame" points="6300" title="Набор для мини-игр">
+                <items>
+                    <item id="sbRS1" count="20" icon="BoySnowboardRaceSnowboard1Icon@avatarIcons" />
+                    <item id="bugsCan" count="20" icon="BugsCanResourceIcon@location" />
+                    <item id="fortuneToken" count="20" icon="FortuneTokenIcon@location" />
+                </items>
+            </product>
+            <product id="campaignKingParty" points="17500" gold="80" silver="3500" tag="campaign,onlyOne" title="Костюм Король вечеринки">
+                <items>
+                    <item id="boyKingParty23Set" count="1" gender="1" icon="BoyKingPartyOfferIcon@ui" type="clothesSet" />
+                    <item id="girlKingParty23Set" count="1" gender="2" icon="GirlKingPartyOfferIcon@ui" type="clothesSet" />
+                </items>
+            </product>
+            <product id="campaignAvatarShowCard" points="21000" gold="150" silver="5000" tag="campaign,onlyOne" title="Карточка Аватар шоу">
+                <items>
+                    <item id="collectionCardMakarov" count="1" icon="AvatarShowCardOfferIcon@ui" />
+                </items>
+            </product>
+            <product id="campaignPackPlantLamp" points="17500" gold="120" silver="3500" tag="campaign,onlyOne" title="Декоративное украшение">
+                <items>
+                    <item id="plantLamp" count="1" icon="PlantLamp23OfferIcon@ui" />
+                </items>
+            </product>
+            <!--  CAMPAIGN SPECIAL OFFERS TGC  -->
+            <product index="0" id="campaignPackMobileAccessory" points="6300" gold="70" silver="1500" tag="onlyOne" title="Набор для телефона">
+                <items>
+                    <item id="tgc23MobileAccessory" count="1" icon="MobileTgc23Icon@ui" />
+                </items>
+            </product>
+            <product index="1" id="campaignPackAvapack" points="14900" gold="80" silver="3500" tag="onlyOne" title="Набор c авапакой">
+                <items>
+                    <item id="avapacTGC" count="1" icon="AVApacTGCIcon@ui" />
+                </items>
+            </product>
+            <product index="5" id="campaignPackTrampoline" points="29400" gold="200" silver="6500" tag="campaign,onlyOne" title="Набор с батутом" photo="http://cdn-sp.tortugasocial.com/avataria-ru/promo/GoldCoin.png">
+                <items>
+                    <item id="trampoline23" count="1" icon="TrampolineIcon@ui" />
+                </items>
+            </product>
+            <product index="6" id="campaignPackDreamHouse" points="19600" gold="135" silver="5000" tag="campaign,onlyOne" title="Набор с домиком барби" photo="http://cdn-sp.tortugasocial.com/avataria-ru/promo/GoldCoin.png">
+                <items>
+                    <item id="house23" count="1" icon="DreamHouseIcon@ui" />
+                </items>
+            </product>
+            <product index="7" id="campaignDirolCard" points="19600" gold="150" silver="5000" tag="campaign,onlyOne" title="Карточка Дироллиус">
+                <items>
+                    <item id="collectionCardDirollius" count="1" icon="DirolCardOfferIcon@ui" />
+                </items>
+            </product>
+            <product index="8" id="campaignPackPuffLamp" points="21000" gold="175" silver="5000" tag="campaign,onlyOne" title="Кресло со светильником">
+                <items>
+                    <item id="poofLamp23" count="1" icon="PuffLamp23OfferIcon@ui" />
+                </items>
+            </product>
+            <product id="campaignPackPersonalAnim23" points="175000" gold="2500" silver="20000" title="Набор с персональными анимациями" tag="onlyOne">
+                <items>
+                    <item id="bubbleGumAnimation" count="1" />
+                    <item id="chamomileAnimation" count="1" />
+                    <item id="confettiAnimation" count="1" />
+                </items>
+            </product>
+        </products>
+        <silverPacks>
+            <product gold="1" silver="100" icon="OfferSilverPack10@ui" tag="mainDialog" />
+            <product gold="5" silver="500" icon="OfferSilverPack50@ui" tag="mainDialog" />
+            <product gold="25" silver="2500" icon="OfferSilverPack500@ui" tag="mainDialog" />
+            <product gold="50" silver="5000" icon="OfferSilverPack5000@ui" tag="mainDialog" />
+        </silverPacks>
+    </billing>
+    <modules>
+        <!--  HALLOWEEN 2023  -->
+        <module id="halloween2023" loadingContent="halloween2023">
+            <shops title="#shopsTitle">
+                <item id="hw23Shop" index="8" category="dialog" targetId="hw23Shop" module="halloween2023">
+                    <icon name="ShopIcon@halloween2023" title="#hw19CandyExchangeDialogTitle" titleGlowColor="0x012529" />
+                </item>
+            </shops>
+            <locationSound>
+                <sound id="hwSound1" library="halloween2023" />
+                <sound id="hwSound2" library="halloween2023" />
+                <sound id="hwSound3" library="halloween2023" />
+                <sound id="hwSound4" library="halloween2023" />
+                <sound id="hwSound5" library="halloween2023" />
+                <sound id="Piano1" library="sounds" />
+                <sound id="Piano2" library="sounds" />
+                <sound id="Piano3" library="sounds" />
+                <sound id="Piano4" library="sounds" />
+                <sound id="Piano5" library="sounds" />
+            </locationSound>
+            <promo>
+                <prize id="1">
+                    <receive> http://cdn-sp.tortugasocial.com/avataria-ru/promo/modules/hw23/Wall_halloween2023_Trophy_310x310.png </receive>
+                </prize>
+                <prize id="2">
+                    <receive> http://cdn-sp.tortugasocial.com/avataria-ru/promo/modules/hw23/Wall_halloween2023_Secret_Trophy_310x310.png </receive>
+                </prize>
+            </promo>
+        </module>
+        <!-- RESPECT BATTLE 2023 -->
+        <module id="respectBattle2023" loadingContent="respectBattle2023">
+            <promo>
+                <prize id="1">
+                    <receive> http://cdn-sp.tortugasocial.com/avataria-ru/promo/modules/rb23/Wall_respectBattle2023_Trophy_310x310.png </receive>
+                </prize>
+                <prize id="2">
+                    <receive> http://cdn-sp.tortugasocial.com/avataria-ru/promo/modules/rb23/Wall_respectBattle2023_Top_Trophy_310x310.png </receive>
+                </prize>
+            </promo>
+        </module>
+        <!--  FAMILY DAY 2023  -->
+        <module id="familyDay2016" loadingContent="familyDay2016"> </module>
+        <!-- AVA BIRTHDAY 2023 -->
+        <module id="avaBirthday2023" loadingContent="avaBirthday2023">
+            <shops>
+                <item id="ab23Shop" index="8" category="dialog" targetId="ab23Shop">
+                    <icon name="AB23ShopIcon@avaBirthday2023" title="#avaBirthday2023ShopDialogTitle" titleGlowColor="0x0d5d67" />
+                </item>
+            </shops>
+            <promo>
+                <prize id="1">
+                    <receive> http://cdn-sp.tortugasocial.com/avataria-ru/promo/modules/ab23/Wall_avaBirthday2023_Trophy_310x310.png </receive>
+                </prize>
+                <prize id="2">
+                    <receive> http://cdn-sp.tortugasocial.com/avataria-ru/promo/modules/ab23/Wall_avaBirthday2023_Top_Trophy_310x310.png </receive>
+                </prize>
+            </promo>
+        </module>
+        <!-- MAY 1ST 2023 -->
+        <module id="may1st2017" loadingContent="may1st2015">
+            <config>modules/events/may1st2023.xml</config>
+            <promo>http://cdn-sp.tortugasocial.com/avataria-ru/promo/modules/m1st15/Wall_1may2015_309x309.png</promo>
+        </module>
+        <!--  FIRST MAY 2023  -->
+        <module id="firstMay2023" loadingContent="firstMay2023">
+            <promo>
+                <prize id="1">
+                    <receive> http://cdn-sp.tortugasocial.com/avataria-ru/promo/modules/mf23/WallPost_1May2023_title.png </receive>
+                </prize>
+            </promo>
+        </module>
+        <!--  FAIR 2022  -->
+        <module id="fair2022" loadingContent="fair2022">
+            <promo> </promo>
+        </module>
+        <!--  FIRST APRIL 2023  -->
+        <module id="firstApril2023" loadingContent="firstApril2023">
+            <config>modules/events/firstApril2023.xml</config>
+            <locations title="#locationTitle">
+                <item id="fa23Park" index="15" category="outside" targetId="fa23Park" subTargetId="fa23">
+                    <icon name="ParkLocationIcon@firstApril2023" title="#fa2023LocationTitle" />
+                </item>
+            </locations>
+            <shops title="#shopsTitle">
+                <item id="fa23Shop" index="8" category="dialog" targetId="fa23Shop">
+                    <icon name="ShopIcon@firstApril2023" title="#fa2020ShopDialogTitle" titleGlowColor="0x008093" />
+                </item>
+            </shops>
+            <games title="#gamesTitle">
+                <item id="fa23BiterGame" index="999" category="miniGame" targetId="biter" subTargetId="fa23Park">
+                    <icon name="BiterGameIcon@biterGame" title="#biterGameLabel" />
+                </item>
+            </games>
+            <promo>
+                <prize id="1">
+                    <receive> http://cdn-sp.tortugasocial.com/avataria-ru/promo/modules/fa23/WallPost1April2023_title.png </receive>
+                </prize>
+                <prize id="2">
+                    <receive> http://cdn-sp.tortugasocial.com/avataria-ru/promo/modules/fa23/WallPost1April2023_avapaca.png </receive>
+                </prize>
+            </promo>
+        </module>
+        <!-- HOLY 2023 -->
+        <module id="holy2023" loadingContent="holy2023" />
+        <!-- ST 2023 -->
+        <module id="shrovetide2023" loadingContent="shrovetide2023">
+            <shops title="#shopsTitle">
+                <item id="st23Shop" index="8" category="dialog" targetId="st23Shop">
+                    <icon name="ShopIcon@shrovetide2023" title="#st23ShopTitle" titleGlowColor="0x096d79" />
+                </item>
+            </shops>
+            <promo>
+                <prize id="progress">
+                    <receive> http://cdn-sp.tortugasocial.com/avataria-ru/promo/modules/st23/Wall_310x310_Trophy.png </receive>
+                </prize>
+            </promo>
+            <inventory>
+                <category id="game" typeClass="game">
+                    <item id="st23pan" label="#st17PanLabel" description="#st17PanDescription" name="Pan@shrovetide2023" icon="PanIcon@shrovetide2023" canBuy="0" />
+                </category>
+                <category id="craftLoot" typeClass="loot">
+                    <item id="st23Candy" name="CandyLoot@shrovetide2023" icon="CandyIcon@shrovetide2023" label="#st23CandyLabel" />
+                </category>
+                <category id="craftedActive" typeClass="active">
+                    <item id="stCraftedPancake" label="#stCraftedPancakeLabel" name="PancakeLootIcon@shrovetide2023" icon="PancakeLootIcon@shrovetide2023" canBuy="0">
+                        <modifyers>
+                            <modifyer effect="10" name="energy" />
+                        </modifyers>
+                    </item>
+                </category>
+            </inventory>
+        </module>
+        <!-- BLACK FRIDAY 2022 -->
+        <module id="blackFriday2022" loadingContent="blackFriday2022"> </module>
+        <!-- HOLIDAY EVENT -->
+        <module id="holidayEvent"> </module>
+        <!-- SV 2023 -->
+        <module id="stval2022" loadingContent="stval2022">
+            <shops title="#shopsTitle">
+                <item id="sv22Shop" index="8" category="dialog" targetId="sv22Shop">
+                    <icon name="SV20ShopIcon@stval2022" title="#sv2020ShopDialogTitle" titleGlowColor="0x9a162b" />
+                </item>
+            </shops>
+            <promo>
+                <prize id="progress">
+                    <receive> https://cdn-sp.tortugasocial.com/avataria-ru/promo/modules/sv23/Wall_310x310_Trophy.png </receive>
+                </prize>
+            </promo>
+        </module>
+        <!--  TGC 2020  -->
+        <module id="tgc2020" loadingContent="tgc2020">
+            <config>modules/events/tgc2020.xml</config>
+            <promo> </promo>
+        </module>
+        <!--  PLAY AT HOME 2020  -->
+        <module id="playAtHome2020" loadingContent="playAtHome2020"> </module>
+        <!--  FAMILY DAY 2016  -->
+        <!-- 
+        <module id="familyDay2016" loadingContent="familyDay2016">
+            <config>modules/events/familyDay2016.xml</config>
+        </module>
+		 -->
+        <!-- SPRING DAY 2020 -->
+        <module id="springDay2019" loadingContent="springDay2019">
+            <config>modules/events/springDay2020.xml</config>
+            <promo>
+                <prize id="1">
+                    <receive> http://cdn-sp.tortugasocial.com/avataria-ru/promo/modules/sd20/Wall_310x310_Spring2020_Stickers.png </receive>
+                </prize>
+            </promo>
+        </module>
+        <module id="seasonEvent" loadingContent="seasonEvent">
+            <config>modules/events/seasonEvent.xml</config>
+        </module>
+        <!--  HALLOWEEN 2016v2  -->
+        <module id="halloween2016v2" loadingContent="halloween2016">
+            <config>modules/events/halloween2016v2.xml</config>
+        </module>
+        <module id="stories01" loadingContent="stories01">
+            <config>modules/events/stories01.xml</config>
+        </module>
+    </modules>
+</config>
