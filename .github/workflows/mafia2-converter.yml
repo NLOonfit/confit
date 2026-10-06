@@ -1,0 +1,51 @@
+name: Build Mafia II converter for Windows
+
+on:
+  push:
+    branches: ["codex/mafia2-converter", "main"]
+    paths: ["mafia2-converter/**", ".github/workflows/mafia2-converter.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: mafia2-converter/package-lock.json
+      - name: Install locked dependencies
+        working-directory: mafia2-converter
+        run: npm ci
+      - name: Build portable Windows x64 app
+        working-directory: mafia2-converter
+        run: npm run package:win
+      - name: Verify application files
+        shell: pwsh
+        run: |
+          $appRoot = "mafia2-converter/release/Mafia2Converter-win32-x64"
+          if (!(Test-Path "$appRoot/Mafia2Converter.exe")) { throw "EXE is missing" }
+          if (!(Test-Path "$appRoot/resources/app/blender_export.py")) { throw "Exporter is missing" }
+      - name: Upload downloadable Windows app
+        uses: actions/upload-artifact@v4
+        with:
+          name: Mafia2Converter-Windows-x64
+          path: mafia2-converter/release/Mafia2Converter-win32-x64/
+          if-no-files-found: error
+          retention-days: 30
+      - name: Download instructions
+        shell: pwsh
+        run: |
+          @"
+          ## Windows application
+          Download **Mafia2Converter-Windows-x64** from the Artifacts section of this run.
+          Extract the entire ZIP, then launch **Mafia2Converter.exe**.
+          Install Blender 4.x separately and choose **blender.exe** inside the application.
+          This portable package contains no Mafia II game files.
+          "@ >> $env:GITHUB_STEP_SUMMARY

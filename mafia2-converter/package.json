@@ -1,0 +1,16 @@
+{
+  "name": "mafia2-converter",
+  "version": "0.2.1",
+  "private": true,
+  "description": "Desktop Mafia II SDS viewer and Blender/FBX exporter",
+  "type": "module",
+  "main": "desktop/main.cjs",
+  "scripts": {
+    "build": "vite build",
+    "start": "electron .",
+    "package:win": "npm run build && electron-packager . Mafia2Converter --platform=win32 --arch=x64 --out=release --overwrite --ignore=\"^/(release|tests)$\"",
+    "test:sds": "node tests/sds-smoke.cjs"
+  },
+  "dependencies": {"three": "0.180.0"},
+  "devDependencies": {"vite": "7.1.7", "electron": "38.2.2", "@electron/packager": "18.4.4", "playwright-core": "1.56.1"}
+}
